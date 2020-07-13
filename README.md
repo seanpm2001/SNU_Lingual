@@ -13,7 +13,7 @@
 
 [01.0 - Index](#Index)
 
-[02.0 - Description](#SNU_InternetFront)
+[02.0 - Description](#SNU_Lingual)
 
 [03.0 - About](#About)
 
@@ -29,8 +29,8 @@
 
 ***
 
-# SNU_InternetFront
-The SNU Internet Front module, a place to talk about preserving a decentralized Internet. This module is not required for your SNU distribution. [Click/tap here to learn how to build SNU](https://gist.github.com/seanpm2001/745564a46186888e829fdeb9cda584de)
+# SNU_Lingual
+The SNU Lingual module, a place for language on SNU. This module currently isn't required for your SNU distribution. [Click/tap here to learn how to build SNU](https://gist.github.com/seanpm2001/745564a46186888e829fdeb9cda584de) 
 
 ***
 
@@ -42,7 +42,7 @@ See above
 
 ## Wiki
 
-[Click/tap here to view this projects Wiki](https://github.com/seanpm2001/SNU_InternetFront/wiki)
+[Click/tap here to view this projects Wiki](https://github.com/seanpm2001/SNU_Lingual/wiki)
 
 ***
 
@@ -56,7 +56,7 @@ See above
 
 Currently, I am the only contributer. You can contribute as well, if you follow the `CONTRIBUTING.md` file.
 
-> * 1. [seanpm2001](https://github.com/seanpm2001/) - 15 commits (As of Monday, July 13th 2020 at 4:13 pm)
+> * 1. [seanpm2001](https://github.com/seanpm2001/) - 17 commits (As of Monday, July 13th 2020 at 4:16 pm)
 
 > * 2. No other contributers allowed
 
@@ -66,7 +66,7 @@ Currently, I am the only contributer. You can contribute as well, if you follow 
 
 File type: `Markdown (*.md)`
 
-File version: `1 (Monday, July 13th 2020 at 4:13 pm)`
+File version: `2 (Monday, July 13th 2020 at 4:16 pm)`
 
 Line count: `0,080`
 
