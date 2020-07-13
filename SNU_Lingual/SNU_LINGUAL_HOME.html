@@ -1,0 +1,7703 @@
+<!--- start of script !--->
+<HTML>
+<head> <!-- external and internal resources needed for page !-->
+<!-- .*. !--> <!-- 01 !--><!-- Encoding !--><meta charset="UTF-16"><!-- the script needed for UTF-16 encoding !--><!-- Internal resource !-->
+<!-- .ico !--><!-- 02 !--<!-- Favicon !--><link rel="icon" href="SNU_UNDERCONSTRUCTION_favicon.ico" type="image/x-icon"/><!-- The favicon for this page !--><!-- external resource !-->
+<!-- No longer necessary !--><!-- .js !--> <!-- 03 !--<!-- JavaScript file 1 !--><!--<script type="text/javascript" src="ExpandAll_ScriptV1.00.js"></script><!-- the script needed to automatically expand all detail tags !--><!-- external resource !-->
+<!-- .js !--><!-- 04 !--><!-- JavaScript file !--><script type="text/javascript" src="Sourcebase_SNUScriptStarter_V1.00.js"></script><!-- The full JavaScript SNU sheet, modify to your liking !-->
+<!-- No longer necessary !--><!-- .css !--><!-- 05 !--<!-- Stylesheet 1 !--><!--<link rel="stylesheet" type="text/css" href="2DStart_Style_StickySideBarVersion1.01.css"> <!-- The stylesheet for the sidebar !--><!-- external resource !-->
+<!-- No longer necessary !--><!-- .css !--><!-- 06 !--<!-- Stylesheet 2 !--><!--<link rel="stylesheet" type="text/css" href="TOP_NAVIGATION_BAR_V1.0.css"> <!-- The stylesheet for the top navigation pane !--><!-- external resource !-->
+<!-- .css !--><!-- 07 !--<!-- Stylesheet 3 !--><link rel="stylesheet" type="text/css" href="Sourcebase_SNUScriptStarter_V1.01.css"> <!-- Make sure to modify this CSS to your liking !--><!-- The stylesheet for the white text !--><!-- external resource !-->
+</head>
+<HEAD>
+<meta> <!-- Meta character set section !-->
+	<!-- meta charset="ANSI"> <!-- page encoding minimum !-->
+	<!-- meta charset="ASCII"> <!-- page encoding  !-->
+	<!-- meta charset="UC-2"> <!-- page encoding  !-->
+	<!-- meta charset="UTF-8"> <!-- page encoding  !-->
+	<meta charset="UTF-16"> <!-- Page encoding main !-->
+	<!-- meta charset="UTF-32"> <!-- page encoding  !-->
+</meta> <!-- End of meta character set section !-->
+<style>
+/* Sourcebase CSS starter file
+Version 1.01 (September 27th 2019 build)
+Most recent: 1.01 (September 27th 2019 build)
+CSS starter script
+*/
+/* Start of stylesheet rules */
+/* Grid system */
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+/* Transparent boxes */
+div.background {
+  background: url(klematis.jpg) repeat;
+  border: 2px solid black;
+}
+div.transbox {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  margin-right: 0px;
+  margin-left: 0px;
+  background-color: #00BFFF; /* The text was there, the background was the wrong color. A new beautiful shade of blue was added to fix this - April 6th 2019 */
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+div.transbox p {
+  margin: 1%; /* make sure this stays at 1%. At 5%, there is a large spacing issue between each new paragraph */
+  font-weight: bold;
+  color: #ffffff;
+}
+/* Sidebar */
+body {
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 16%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+/* Topbar */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Headings */
+H1 {
+	color: black;
+}
+H2 {
+	color: black;
+}
+H3 {
+	color: black;
+}
+H4 {
+	color: black;
+}
+H5 {
+	color: black;
+}
+H6 {
+	color: black;
+}
+/* Dividers, paragraphs */
+HR {
+	color: black;
+}
+p {
+	color: black;
+}
+/* Other rich text */
+i {
+	color: black;
+}
+u {
+	color: black;
+}
+b {
+	color: black;
+}
+s {
+	color: black;
+}
+sub {
+	color: black;
+}
+sup {
+	color: black;
+}
+/* Details and summary */
+details {
+	color: black;
+}
+summary {
+	color: black;
+}
+/* Progress bar 
+/* Option 1 */
+progress {
+	display:inline-block;
+	width:190px;
+	height:20px;
+	padding:15px 0 0 0;
+	margin:0;
+	background:none;
+	border: 0;
+	border-radius: 15px;
+	text-align: left;
+	position:relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+}
+progress::-webkit-progress-bar {
+	height:11px;
+	width:150px;
+	margin:0 auto;
+	background-color: #CCC;
+	border-radius: 15px;
+	box-shadow:0px 0px 6px #777 inset;
+}
+progress::-webkit-progress-value {
+	display:inline-block;
+	float:left;
+	height:11px;
+	margin:0px -10px 0 0;
+	background: #F70;
+	border-radius: 15px;
+	box-shadow:0px 0px 6px #777 inset;
+}
+progress:after {
+	margin:-26px 0 0 -7px;
+	padding:0;
+	display:inline-block;
+}
+/* Option 2 */
+#progress {
+    background: #333;
+    border-radius: 13px;
+    height: 20px;
+    width: 300px;
+    padding: 3px;
+}
+
+#progress:after {
+    content: '';
+    display: block;
+    background: orange;
+    width: 50%;
+    height: 100%;
+    border-radius: 9px;
+}
+/* Option 3 */
+#progressbar {
+  background-color: black;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar>div {
+  background-color: orange;
+  width: 40%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+}
+/* Option 4 */
+/* Step 1 */
+progress,          /* All HTML5 progress enabled browsers */
+{
+
+    /* Turns off styling - not usually needed, but good to know. */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+}
+/* Step 2 */
+/* IE10 */
+progress {
+    color: black;
+}
+
+/* Firefox */
+progress::-moz-progress-bar { 
+    background: black;  
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: black;
+}
+/* Step 3 */
+progress[value^="9"]::-moz-progress-bar {
+background-color : red;
+}
+/* 
+More CSS - Blackboard kit
+blackboard kit 
+Version 1
+*/
+/* white text for all! */
+/* the blackboard CSS file optimizes text for dark backgrounds, just like chalk on a blackboard */
+/* heading section */
+h1 {
+	color: white;
+}
+H1 {
+	color: white;
+}
+h2 {
+	color: white;
+}
+H2 {
+	color: white;
+}
+h3 {
+	color: white;
+}
+H3 {
+	color: white;
+}
+h4 {
+	color: white;
+}
+H4 {
+	color: white;
+}
+h5 {
+	color: white;
+}
+H5 {
+	color: white;
+}
+h6 {
+	color: white;
+}
+H6 {
+	color: white;
+}
+/* rich text section */
+p {
+	color: white;
+}
+P {
+	color: white;
+}
+b {
+	color: white;
+}
+B {
+	color: white;
+}
+u {
+	color: white;
+}
+U {
+	color: white;
+}
+s {
+	color: white;
+}
+S {
+	color: white;
+}
+i {
+	color: white;
+}
+I {
+	color: white;
+}
+sub {
+	color: white;
+}
+SUB {
+	color: white;
+}
+sup {
+	color: white;
+}
+SUP {
+	color: white;
+}
+}
+details {
+	color: white;
+}
+DETAILS {
+	color: white;
+/* OPTIONAL */
+/*
+a {
+	color: white;
+}
+A {
+	color: white;
+}
+*/
+/* form section */
+form {
+	color: white;
+}
+FORM {
+	color: white;
+}
+/* specialized button hyperlink section */
+a {
+	color: green;
+}
+A {
+	color: green;
+}
+/* WebGL compatibility layer */
+canvas {
+	border: 2px solid black;
+	background-color: black;
+}
+video {
+	display: none;
+}
+/* Gallery */
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Border image */
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 round;
+}
+/* end of stylesheet */
+/* End of stylesheet rules */
+/* Description
+None
+*/
+/* Statistics
+Character count: 07,.349 characters (07,.349 bytes) (07,.349 Kilobytes)
+Line count: 0,.456
+File type: *.css (Cascade Styling Sheets)
+Language: CSS (Cascade Styling Sheets)
+Version: 2 (September 27th 2019)
+Latest version: 2 (September 27th 2019)
+First version: 1 (September 26th 2019)
+*/
+</style>
+<?
+// PHP section
+?>
+<script>
+console.log("SNU web console for [browser]");
+console.log("The [section] console");
+console.log(">>>");
+</script>
+<TITLE>SourceBase HTML V1.02 - SNU script starter kit resource file</TITLE> <!-- Page title !-->
+</HEAD>
+<BODY BGCOLOR="NAVY"> <!-- Background color !-->
+<!-- Brief color list
+Black (000000)
+White (FFFFFF)
+Cyan (00FFFF)
+Navy (000080)
+Dark grey (333333)
+Light grey (777777)
+Red (FF0000)
+Green (00FF00)
+Turquiose (40E0D0)
+!-->
+<BODY BACKGROUND=".png"> <!-- Background image !--> <!-- Allowed formats: .png .jpg .jpe .jif .gif .bmp .dib .tif .tiff !-->
+<!-- Top navigation bar !-->
+<div class="topnav">
+<a class="active" href="">[PAGE_TITLE/SITE_NAME(SNU)]</a>
+<a href="about:blank">[-]</a><!-- empty link !-->
+<a href="about:blank">[-]</a><!-- empty link !-->
+<a href="about:blank">[-]</a><!-- empty link !-->
+<a href="about:blank">[-]</a><!-- empty link !-->
+<a href="about:blank">[-]</a><!-- empty link !-->
+<a href="about:blank">[-]</a><!-- empty link !-->
+<a href="about:blank">[-]</a><!-- empty link !-->
+<a href="about:blank">[-]</a><!-- empty link !-->
+<a href="about:blank">[-]</a><!-- empty link !-->
+</div> 
+<!-- Top navigation bar !-->
+<!-- Divider !-->
+<!-- Sidebar !-->
+<ul>
+<img src="SampleIcon1.png" alt="Logo.Profile_Icon" width="225" height="225">
+<li><a class="active" href="#home">[SNU Language Database]</a></li>
+<HR>
+<details>
+	<summary><li><a href="#EXPLORE">[Section description]</a></li></summary>
+	</details>
+	<li><HR></li>
+	<details><summary><li id="">Section 1</a></li></summary>
+	<li><a href=".html">Link 1</a></li>
+	</details>
+ 	<li><HR></li>
+	<details><summary><li id="">Section 2</a></li></summary>
+	<li><a href=".html">Link 1</a></li>
+	</details>
+ 	<li><HR></li>	
+	<details><summary><li id="">Section 3</a></li></summary>
+	<li><a href=".html">Link 1</a></li>
+	</details>
+ 	<li><HR></li>
+</ul>
+<div style="margin-left:15.1%;padding:1px 16px;height:1000px;">
+<!-- End of sidebar and topbar section !-->
+<HR>
+<H1>SNU Lingual - Language database</H1>
+<HR>
+<H1>English (US) mode</H1>
+<select>
+	<option value="lang1">En</option>
+	<option value="lang1">Color</option>
+	<option value="lang1">Yes</option>
+	<option value="lang1">Hello</option>
+</select>
+<HR>
+<H1>English (UK) mode</H1>
+<select>
+	<option value="lang1">En</option>
+	<option value="lang1">Colour</option>
+	<option value="lang1">Yes</option>
+	<option value="lang1">Hello</option>
+</select>
+<HR>
+<H1>En espanol mode</H1>
+<select>
+	<option value="lang1">En</option>
+	<option value="lang1">[Spanish translation for color]</option>
+	<option value="lang1">Por</option>
+	<option value="lang1">iHola</option>
+</select>
+<HR>
+<H1>Universal dictionary</H1>
+<H3>This section is expected to be converted to HTML5</H3>
+<!--
+SNU Translation system file
+
+ENGLISH_TO_SPANISH_TRANSLATOR
+
+Coming soon
+
+SPANISH_TO_ENGLISH_TRANSLATOR
+
+Coming soon
+
+ENGLISH_TO_FRENCH_TRANSLATOR
+
+Coming soon
+
+FRENCH_TO_ENGLISH_TRANSLATOR
+
+Coming soon
+
+SPANISH_TO_FRENCH_TRANSLATOR
+
+Coming soon
+
+FRENCH_TO_SPANISH_TRANSLATOR
+
+Coming soon
+
+ENGLISH_TO_GERMAN_TRANSLATOR
+
+Coming soon
+
+SPANISH_TO_GERMAN_TRANSLATOR
+
+Coming soon
+
+FRENCH_TO_GERMAN_TRANSLATOR
+
+Coming soon
+
+GERMAN_TO_ENGLISH_TRANSLATOR
+
+Coming soon
+
+GERMAN_TO_SPANISH_TRANSLATOR
+
+Coming soon
+
+GERMAN_TO_FRENCH_TRANSLATOR
+
+Coming soon
+
+--------------------------------------------------------------------
+
+ENGLISH_TO_ARABIC_TRANSLATOR
+
+Coming soon
+
+ENGLISH_TO_CHINESE(SIMPLIFIED)_TRANSLATOR
+
+Coming soon
+
+ENGLISH_TO_RUSSIAN_TRANSLATOR
+
+Coming soon
+
+SPANISH_TO_ARABIC_TRANSLATOR
+
+Coming soon
+
+SPANISH_TO_CHINESE(SIMPLIFIED)_TRANSLATOR
+
+Coming soon
+
+SPANISH_TO_RUSSIAN_TRANSLATOR
+
+Coming soon
+
+FRENCH_TO_ARABIC_TRANSLATOR
+
+Coming soon
+
+FRENCH_TO_CHINESE(SIMPLIFIED)_TRANSLATOR
+
+Coming soon
+
+FRENCH_TO_RUSSIAN_TRANSLATOR
+
+Coming soon
+
+GERMAN_TO_ARABIC_TRANSLATOR
+
+Coming soon
+
+GERMAN_TO_CHINESE(SIMPLIFIED)_TRANSLATOR
+
+Coming soon
+
+GERMAN_TO_RUSSIAN_TRANSLATOR
+
+Coming soon
+
+--------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ARABIC_TO_ENGLISH_TRANSLATOR
+
+A section
+
+الأمهرية = Amharic
+ا = A
+سمعي = Audio
+الحساب = Account
+عربى = Arabic
+هل = Are
+تفاحة = Apple
+محزر = Alert
+
+B section
+
+منع = Block
+مسدود = blocked
+حجب = blocking
+مانع = blocker
+المتصفح = Browser
+تصفحها = browsed
+تصفح = browsing
+ينحني = bow
+منحنى = bowed
+كتاب = book
+قليلا = bit
+عضة = bite
+
+C section
+
+أغلق = Close
+صينى = Chinese
+الاتصال = Connect
+تعليق = Comment
+التحقق من = Check
+واضح = Clear
+قصاصة = Clip
+الحذر = Caution
+لا تستطيع = Cannot
+المقاصة = Clearing
+مقصوص = Clipped
+قصاصة = Clipping
+التحقق = Checked
+تدقيق = Checking
+
+D section
+
+تحميل = Download
+حذف = Delete
+توزيع = Distribution
+موت = Die
+الموت = Death
+فعل = Do
+الماس = Diamond
+يغوص = Dive
+سقط ارضا = Dived
+غوص = Diving
+أسفل = Down
+
+E section
+
+الإنجليزية = English
+تنفيذ = Executable
+أعدم = Executed
+نفذ - اعدم = Execute
+تنفيذ = Executing
+خطأ = Error
+أخطاء = Errors
+أرض = Earth
+حالة طوارئ = Emergency
+الشرق = East
+الشرقية = Eastern
+
+F section
+
+صديق = Friend
+لم يتم العثور على الملف = File not found
+الفرنسية = French
+حر = Free
+ملف = File
+ملفات = Files
+يقاتل = Fight
+لائق بدنيا = Fit
+حارب = Fought
+نار = Fire
+ثعلب = Fox
+يواجه = Flip
+إلى عن على = For
+
+G section
+
+ألمانية = German
+الجورجية = Georgian
+الإغريقي = Greek
+نادي رياضي = Gym
+لطيف = Gentle
+
+H section
+
+التاريخ = History
+مرحبا = Hello
+ملحوظة = Hint
+ملمحا = Hinting
+لمح = Hinted
+مفصل = Hinge
+يتوقف = Hinges
+يتوقف = Hinged
+معلق = Hanging
+اللغة العبرية = Hebrew
+هو = He
+له = Him
+لها = Her
+له = His
+لها = Hers
+
+I section
+
+في = In
+صورة = Image
+الإنترنت = Internet
+جليد = Ice
+جليدي = Icy
+أنا = I
+عدد صحيح = Integer
+الأعداد الصحيحة = Integers
+إمبراطوري = Imperial
+أيسلندي = Icelandic
+بوصة = Inch
+بوصة = Inches
+بنسبة = Inching
+
+J section
+
+مجرد = Just
+اليابان = Japan
+اليابانية = Japanese
+إناء = Jar
+جاوي = Javanese
+ضربة بالكوع = Jab
+جاك = Jack
+الاصطياد = Jacking
+رفعوا = Jacked
+مربى = Jam
+مزدحم = Jammed
+متنافر = Jarred
+جوك = Jock
+نجارة = Junior
+المرح = Jolly
+هلام = Jelly
+طائرة نفاثة = Jet
+طائرات = Jets
+قفز = Jump
+قفز = Jumped
+القفز = Jumping
+
+K section
+
+المعرفه = Knowledge
+الكورية = Korean
+الكاراتيه = Karate
+كوريا = Korea
+احتفظ = Keep
+طيب القلب = Kind
+لطف = Kindness
+حارس = Keeper
+حفظ = Keeping
+طائرة ورقية = Kite
+عدة = Kit
+قطه صغيره = Kitten
+قبلة = Kiss
+القبلات = Kissed
+تقبيل = Kissing
+قتل = Kill
+قتل = Killed
+قتل = Killing
+القاتل = Killer
+ركلة = Kick
+ركل = Kicked
+الركل = Kicking
+أبقى = Kept
+تنورة = Kilt
+مربي الكلاب = Kennel
+نواة = Kernel
+عشب البحر = Kelp
+الكرمة = Karma
+
+L section
+
+سجل = Log
+لغة = Language
+غادر = Leave
+عقدة = Loop
+اليسار = Left
+فرع الشجره = Limb
+رجل = Leg
+الساقين = Legs
+يغطي الرجل = Legging
+سروال ضيق = Leggings
+أطرافه = Limbs
+جير = Lime
+الليمون الحامض = Limes
+ليمون = Lemon
+ليمون = Lemons
+ضوء = Light
+أضواء = Lights
+إضاءة = Lighting
+أشعل = Lit
+استمع = Listen
+استماع = Listening
+مستمع = Listener
+شفة = Lip
+شفاه = Lips
+لعق = Lick
+يلعق = Licks
+لعق = Licking
+يمسح = Licked
+تعلم = Learn
+تعلم = Learning
+تعلمت = Learnt
+يضحك = Laugh
+ضحك = Laughed
+يضحك = Laughing
+قلة = Lack
+تفتقر = Lacked
+تفتقر إلى = Lacking
+ضع الكلمة المناسبة = Label
+ملصقات = Labels
+وضع العلامات = Labeling
+المسمى = Labeled
+فانوس = Lantern
+الفوانيس = Lanterns
+درس = Lesson
+الدروس = Lessons
+شهوة = Lust
+مصباح = Lamp
+مصابيح = Lamps
+كبير = Large
+أكبر = Larger
+أكبر = Largest
+الخالية من = Lean
+أصغر حجما = Leaner
+الاخير = Last
+استمر = Lasted
+دائم = Lasting
+طويل = Long
+طويل = Longer
+أطول = Longest
+برق = Lightning
+رخصة = License
+الترخيص = Licensing
+مرخص = Licensed
+استمعت= Listened
+أرض = Land
+هبطت = Landed
+هبوط = Landing
+لاو = Lao
+لاتينية = Latin
+اللاتفية = Latvian
+اللتوانية = lithuanian
+اللوكسمبرجية = Luxembourgish
+خط = Line
+خطوط = Lines
+مبطن = Lined
+حضن = Lap
+ملفوف = Lapped
+اللف = Lapping
+لفات = Laps
+متأخر = Late
+في وقت لاحق = Later
+آخر = Latest
+جلد = Leather
+خط = Lane
+قفل = Lock
+مقفل = Locked
+قفل = Locking
+حب = Love
+أحب = Loved
+محب = Loving
+حبيب = Lover
+أقل = Less
+أقل = Lesser
+الأكاذيب = Lies
+كذب = Lied
+كذاب = Liar
+دائم = Lingering
+جلد = Lash
+هاجم = Lashed
+جلد = Lashing
+أعرج = Lame
+أعرج = Lamer
+اعرج = Lamest
+نول = Loom
+تلوح في الأفق = Looming
+تلوح في الأفق = Loomed
+يرقة = Larva
+محلي = Local
+معرفة = Lore
+استدراج = Luring
+إغراء، شرك، طعم = Lure
+قيادة = Lead
+قيادة = Leading
+زعيم = Leader
+بحيرة = Lake
+البحيرات = Lakes
+ورقة الشجر = Leaf
+اوراق اشجار = Leaves
+سمح = Let
+وحيد = Lonely
+كبد = Liver
+راحه = Lie
+الوبر = Lint
+حي = Live
+بحيوية = Lively
+يسكن = Lived
+محليا = Locally
+جراد = Locust
+فص = Lobe
+حمم بركانية = Lava
+رغيف = Loaf
+أرغفة = Loaves
+وهق = Lasso
+مختبر = Lab
+مختبر = Laboratory
+تشحيم = Lube
+المزلق = Lubricant
+قمل = Lice
+مثل = Like
+احب = Liked
+تروق = Liking
+رافعة = Lever
+تأثير ايجابي = Leverage
+خفض = Lessen
+الأقل = Least
+عقد الإيجار = Lease
+الخزامي = Lavender
+عدس = Lamb
+القانون = Law
+المحامية = Lawyer
+قوانين = Laws
+اللازورد = Lapis
+سلم = Ladder
+نظرة = Look
+يبحث = Looking
+الحديقة = Lawn
+تسرب = Leak
+تسرب = Leaking
+سجل = Log
+تسجيل = Logging
+أعدم من غير محاكمة = Lynch
+صفى = Leach
+متاهة = Labyrinth
+منضدة للقراءة = Lectern
+مكتبة = Library
+أمين المكتبة = Librarian
+تأخر = Lag
+متخلف = Lagging
+نهب = Loot
+المنهوبة = Looted
+نهب = Looting
+حياة = Life
+فتى = Lad
+إقراض = Lend
+الإقراض = Lending
+طفرة - قفزه = Leap
+قفز = Leaped
+القفز = Leaping
+شحم الخنزير = Lard
+خسارة = Loss
+واسع = Loose
+تخسر = Lose
+ضائع = Lost
+لاري = Larry
+ثابر = Lurk
+سكسي جديد = Lurker
+يترصد = Lurking
+قائمة = List
+المدرج = Listed
+قائمة = Listing
+المصباح الكهربائي = Lightbulb
+مسؤولية = Liability
+شبه = Likeness
+دائم = Lasting
+تسجيل = Logged
+فوضوي = Lawless
+علقة = Leech
+حظ = Luck
+سعيد الحظ  = Lucky
+خشب = Lumber
+حظا = Luckiest
+حظا = Luckier
+قطعة أرض = Lot
+الكثير = Lots
+مترصد = Lurked
+عرضة = Liable
+المطلوبات = Liabilities
+يؤدى = Led
+كتلة = Lump
+محفر = Lumpy
+رسالة = Letter
+حروف = Letters
+متشيطن = Leprechaun
+وزن خفيف = Lightweight
+الأدب = Literature
+حرفي = Literal
+حرفيا = Literally
+غادر = Leave
+مغادرة = Leaving
+خاسر = Loser
+وحيد = Lone
+حيد = Loner
+ولاعة = Lighter
+ليبر = Libre
+الإعدام خارج نطاق القانون = Lynching
+بسحل = Lynched
+عنوان تفسيري = Legend
+الأساطير = Legends
+أسطوري = Legendary
+حلقة الوصل = Link
+مرتبط = Linked
+ربط = Linking
+الروابط = Links
+ميراث = Legacy
+شعار = Logo
+الشعارات = Logos
+حمل = Load
+محمل = Loaded
+جار التحميل = Loading
+محمل = Loader
+مستوى = Level
+التسوية = Leveling
+تعادل = Leveled
+مستويات = Levels
+محدود = Limited
+حد = Limit
+الحد = Limiting
+حدود = Limits
+عدسة = Lens
+العدسات = Lenses
+حلقات = Looping
+يحلق = Looped
+بير = Looper
+المعيشة = Living
+محلول = Lotion
+المستحضرات = Lotions
+قليل = Little
+اصغر = Littlest
+أصغر = Littler
+تعبير = Litter
+عرج = Limp
+أعرج = Limping
+كتلة = Lumps
+الخلط = Lumping
+جميل = Lovely
+لتر = Liter
+جفن العين = Lid
+لندن = London
+تريث = Lingered
+بقي = Linger
+جانبي = Lateral
+= legal
+= liquor
+= licorice
+= Lush
+= Liberty
+= Liberties
+= Libraries
+= Lawful
+= Lamborghini
+= Latter
+= Lilac
+= Lobby
+= Laptop
+= Loon
+= Loonie
+= Lifeguard
+= Loft
+= Lay
+
+M section
+
+موزيلا فايرفوكس = Mozilla Firefox
+أكثر من = More
+صباح = Morning
+نعناع = Mint
+إصلاح = Mending
+مقصود = Meant
+المعنى= Meaning
+تعني = Mean
+أكثر شراسة = Meaner
+بخلا = Meanest
+وسط = Middle
+حديث = Modern
+ضباب = Mist
+ربما = Might
+الجبار = Mighty
+اعتي = Mightiest
+القمر = Moon
+خريطة = Map
+رسم الخرائط = Mapping
+تعيين = Mapped
+قتل = Murder
+قاتل = Murderer
+اغتيال = Murdering
+عظم = Most
+التقى = Met
+
+N section
+
+ليس آمن للعمل = Not Safe For Work
+الجديد = New
+ليس = Not
+شمال = North
+لا = No
+كلا = Nope
+شمالي = Northern
+ليل = Night
+وقت الليل = Nighttime
+النيكل = Nickel
+تسعة = Nine
+الشمال الغربي = Northwest
+شمالي شرقي = Northeast
+
+O section
+
+خارج = Out
+انتاج = Output
+خارجي = Outer
+رأي = Opinion
+الآراء = Opinions
+بصلة = Onion
+بصل = Onions
+أو = Or
+خامة = Ore
+حسنا = Okay
+يا = Oh
+وجه الفتاة = Oops
+على = Over
+شعر بالتعب = Oat
+الشوفان = Oats
+فسبق = Outran
+تجاوز = Outrun
+
+P section
+
+صورة = Picture
+صنوبر = Pine
+= Point
+= Pointed
+= Pointed
+= Pint
+= Plant
+= Planting
+= Planted
+= Pin
+= Pinned
+= Pinning
+= Pie
+= Pit
+= Pick
+= Picked
+= Picking
+
+Q section
+
+جودة = Quality
+= Quote
+= Quota
+= Quit
+= Quitter
+= Quitting
+= Question
+= Questions
+= Questioned
+= Questioning
+= Quiet
+= Quite
+= Quiter
+= Quietest
+= Quoting
+= Quoted
+
+R section
+
+تحديث = Refresh
+الروسية = Russian
+إعادة النظر = Review
+أبلغ عن = Report
+طلب = Request
+إعادة توجيه = Redirect
+إعادة توجيه = Redirecting
+إعادة توجيه = Redirected
+دين = Religion
+= Rip
+= Ripped
+= Ripping
+= Riot
+= Rioting
+= Rioter
+= Rent
+= Renter
+= Renting
+= Rat
+= Rats
+= Ratted
+= Rattle
+= Rattling
+= Rattled
+= Requesting
+= Requested
+= Rope
+= Roping
+= Roped
+
+S section
+
+إشارة = Sign
+الأسبانية = Spanish
+معلق = Suspended
+بالتأكيد = Sure
+النصي = Script
+= South
+= Southern
+= Sip
+= So
+= Space
+= Series
+= Sent
+= Sending
+= Send
+= Sight
+= Site
+= Sighted
+= Sighting
+= Sapling
+= Sap
+= Slop
+= Sloppy
+= Soup
+= Suck
+= Sucked
+= Sucking
+= Sender
+= Slot
+= Slope
+= Slopes
+= Sling
+= Slinging
+= Slinged
+= Story
+= Stories
+= Silence
+= Silenced
+= Silencing
+= Snake
+= Snakes
+= Sheep
+= Sought
+= Soap
+= Soapy
+= Sad
+= Sadness
+= Sadder
+
+T section
+
+تقليدي = Traditional
+= Time
+= Timer
+= Timed
+= Timing
+= Tip
+= Tips
+= Tipped
+= Tipping
+= Topping
+= Tube
+= Tubes
+= Tub
+= Tight
+= Tighter
+= Tightest
+= That
+= The
+= They
+= Tint
+= Tin
+
+U section
+
+رفع = Upload
+اسم المستخدم = Username
+= User
+= Up
+= Using
+= Used
+= Uploading
+= Uploaded
+= Uptime
+= Upper
+= Ukelele
+
+V section
+
+افتراضية = Virtual
+فيديو = Video
+رأي = View
+الآراء = Views
+= Vote
+= Voter
+= Voting
+= Very
+= Vroom
+= Vision
+= Visioned
+= Visioning
+= Virtually
+= Vile
+= Vintage
+
+W section
+
+أهلا بك = Welcome
+كتابة = Write
+شبكة = Web
+واسع = Wide
+العالمية = World
+عمل = Work
+= West
+= Western
+= Wrong
+= Wing
+= Winged
+= Winging
+= Wire
+= Wiring
+= Wired
+= Wise
+= Wiser
+= Wisest
+= Welsh
+= White
+= Whip
+= Whipping
+= Whipped
+= Wrote
+= Writing
+= Writer
+= Win
+= Won
+= Winning
+= Winner
+= Will
+= Willing
+= Woke
+= Warp
+= Warping
+= Warped
+= Window
+= Windows
+= Windowed
+= Wipe
+= Wiper
+= Wiped
+= Winter
+
+X section
+
+زوسا = Xhosa
+= Xylophone
+= Xenial
+
+Y section
+
+نعم فعلا = Yes
+أنت = You
+= Yeast
+= You're
+= Your
+= Youre
+= Yearn
+= Yearning
+= Yearned
+= Year
+= Years
+= Yin
+
+Z section
+
+مضغوط = Zipped
+الرمز البريدي = Zip
+= Zone
+= Zoned
+= Zen
+= Zap
+= Zapped
+= Zapping
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+CHINESE(TRADITIONAL)_TO_ENGLISH_TRANSLATOR
+
+A section
+
+= Amharic
+音頻 = Audio
+阿拉伯 = Arabic
+一個 = A
+帳戶 = Account
+是 = Account
+= Apple
+= Alert
+
+B section
+塊 = Block
+= blocked
+= blocking
+= blocker
+瀏覽器 = Browser
+= browsed
+= browsing
+= bow
+= bowed
+= book
+= bit
+= bite
+
+C section
+關 = Close
+評論 = Comment
+中文 = Chinese
+連 = Connect
+校驗 = Check
+= Clear
+= Clip
+= Caution
+= Cannot
+= Clearing
+= Clipped
+= Clipping
+= Checked
+= Checking
+
+D section
+下載 = Download
+刪除 = Delete
+= Distribution
+= Die
+= Death
+= Do
+= Diamond
+= Dive
+= Dived
+= Diving
+= Down
+
+E section
+英語 = English
+可執行文件 = Executable
+執行 = Executed
+執行 = Execute
+執行 = Executing
+錯誤 = Error
+= Errors
+= Earth
+= Emergency
+= East
+= Eastern
+
+F section
+文件未找到 = File not found
+朋友 = Friend
+法國 = French
+自由 = Free
+文件 = File
+檔 = Files
+= Fight
+= Fit
+= Fought
+= Fire
+= Fox
+= Flip
+= For
+
+G section
+德語 = German
+= Georgian
+= Greek
+= Gym
+= Gentle
+
+H section
+歷史 = History
+= Hello
+= Hint
+= Hinting
+= Hinted
+= Hinge
+= Hinges
+= Hinged
+= Hinging
+= Hebrew
+= He
+= Him
+= Her
+= His
+= Hers
+
+I section
+在 = In
+圖片 = Image
+互聯網 = Internet
+= Ice
+= Icy
+= I
+= Integer
+= Integers
+= Imperial
+= Icelandic
+= Inch
+= Inches
+= Inching
+
+J section
+只是 = Just
+日本 = Japan
+日本 = Japanese
+罐 = Jar
+= Javanese
+= Jab
+= Jack
+= Jacking
+= Jacked
+= Jam
+= Jammed
+= Jarred
+= Jock
+= Junior
+= Jolly
+= Jelly
+= Jet
+= Jets
+= Jump
+= Jumped
+= Jumping
+
+K section
+知識 = Knowledge
+= Korean
+= Karate
+= Korea
+= Keep
+= Kind
+= Kindness
+= Keeper
+= Keeping
+= Kite
+= Kit
+= Kitten
+= Kiss
+= Kissed
+= Kissing
+= Kill
+= Killed
+= Killing
+= Killer
+= Kick
+= Kicked
+= Kicking
+= Kept
+= Kilt
+= Kennel
+= Kernel
+= Kelp
+= Karma
+
+L section
+日誌 = Log
+語言 = Language
+離開 = Leave
+環 = Loop
+= Left
+= Limb
+= Leg
+= Legs
+= Legging
+= Leggings
+= Limbs
+= Lime
+= Limes
+= Lemon
+= Lemons
+= Light
+= Lights
+= Lighting
+= Lit
+= Listen
+= Listening
+= Listener
+= Lip
+= Lips
+= Lick
+= Licks
+= Licking
+= Licked
+= Learn
+= Learning
+= Learnt
+= Laugh
+= Laughed
+= Laughing
+= Lack
+= Lacked
+= Lacking
+= Label
+= Labels
+= Labeling
+= Labeled
+= Lantern
+= Lanterns
+= Lesson
+= Lessons
+= Lust
+= Lamp
+= Lamps
+= Large
+= Larger
+= Largest
+= Lean
+= Leaner
+= Last
+= Lasted
+= Lasting
+= Long
+= Longer
+= Longest
+= Lightning
+= License
+= Licensing
+= Licensed
+= Listened
+= Land
+= Landed
+= Landing
+= Lao
+= Latin
+= Latvian
+= lithuanian
+= Luxembourgish
+= Line
+= Lines
+= Lined
+= Lap
+= Lapped
+= Lapping
+= Laps
+= Late
+= Later
+= Latest
+= Leather
+= Lane
+= Lock
+= Locked
+= Locking
+= Love
+= Loved
+= Loving
+= Lover
+= Less
+= Lesser
+= Lies
+= Lied
+= Liar
+= Lingering
+= Lash
+= Lashed
+= Lashing
+= Lame
+= Lamer
+= Lamest
+= Loom
+= Looming
+= Loomed
+= Larva
+= Local
+= Lore
+= Luring
+= Lure
+= Lead
+= Leading
+= Leader
+= Lake
+= Lakes
+= Leaf
+= Leaves
+= Let
+= Lonely
+= Liver
+= Lie
+= Lint
+= Live
+= Lively
+= Lived
+= Locally
+= Locust
+= Lobe
+= Lava
+= Loaf
+= Loaves
+= Lasso
+= Lab
+= Laboratory
+= Lube
+= Lubricant
+= Lice
+= Like
+= Liked
+= Liking
+= Lever
+= Leverage
+= Lessen
+= Least
+= Lease
+= Lavender
+= Lamb
+= Law
+= Lawyer
+= Laws
+= Lapis
+= Ladder
+= Look
+= Looking
+= Lawn
+= Leak
+= Leaking
+= Log
+= Logging
+= Lynch
+= Leach
+= Labyrinth
+= Lectern
+= Library
+= Librarian
+= Lag
+= Lagging
+= Loot
+= Looted
+= Looting
+= Life
+= Lad
+= Lend
+= Lending
+= Leap
+= Leaped
+= Leaping
+= Lard
+= Loss
+= Loose
+= Lose
+= Lost
+= Larry
+= Lurk
+= Lurker
+= Lurking
+= List
+= Listed
+= Listing
+= Lightbulb
+= Liability
+= Likeness
+= Lasting
+= Logged
+= Lawless
+= Leech
+= Luck
+= Lucky
+= Lumber
+= Luckiest
+= Luckier
+= Lot
+= Lots
+= Lurked
+= Liable
+= Liabilities
+= Led
+= Lump
+= Lumpy
+= Letter
+= Letters
+= Leprechaun
+= Lightweight
+= Literature
+= Literal
+= Literally
+= Leave
+= Leaving
+= Loser
+= Lone
+= Loner
+= Lighter
+= Libre
+= Lynching
+= Lynched
+= Legend
+= Legends
+= Legendary
+= Link
+= Linked
+= Linking
+= Links
+= Legacy
+= Logo
+= Logos
+= Load
+= Loaded
+= Loading
+= Loader
+= Level
+= Leveling
+= Leveled
+= Levels
+= Limited
+= Limit
+= Limiting
+= Limits
+= Lens
+= Lenses
+= Looping
+= Looped
+= Looper
+= Living
+= Lotion
+= Lotions
+= Little
+= Littlest
+= Littler
+= Litter
+= Limp
+= Limping
+= Lumps
+= Lumping
+= Lovely
+= Liter
+= Lid
+= London
+= Lingered
+= Linger
+= Lateral
+= legal
+= liquor
+= licorice
+= Lush
+= Liberty
+= Liberties
+= Libraries
+= Lawful
+= Lamborghini
+= Latter
+= Lilac
+= Lobby
+= Laptop
+= Loon
+= Loonie
+= Lifeguard
+= Loft
+= Lay
+
+M section
+火狐瀏覽器 = Mozilla Firefox
+= More
+= Morning
+= Mint
+= Mending
+= Meant
+= Meaning
+= Mean
+= Meaner
+= Meanest
+= Middle
+= Modern
+= Mist
+= Might
+= Mighty
+= Mightiest
+= Moon
+= Map
+= Mapping
+= Mapped
+= Murder
+= Murderer
+= Murdering
+= Most
+= Met
+
+N section
+不安全的工作 = Not Safe For Work
+新 = New
+不 = Not
+= North
+= No
+= Nope
+= Northern
+= Night
+= Nighttime
+= Nickel
+= Nine
+= Northwest
+= Northeast
+
+O section
+退房 = Out
+= Output
+= Outer
+= Opinion
+= Opinions
+= Onion
+= Onions
+= Or
+= Ore
+= Okay
+= Oh
+= Oops
+= Over
+= Oat
+= Oats
+= Outran
+= Outrun
+
+P section
+圖片 = Picture
+= Pine
+= Point
+= Pointed
+= Pointed
+= Pint
+= Plant
+= Planting
+= Planted
+= Pin
+= Pinned
+= Pinning
+= Pie
+= Pit
+= Pick
+= Picked
+= Picking
+
+Q section
+質量 = Quality
+= Quote
+= Quota
+= Quit
+= Quitter
+= Quitting
+= Question
+= Questions
+= Questioned
+= Questioning
+= Quiet
+= Quite
+= Quiter
+= Quietest
+= Quoting
+= Quoted
+
+R section
+刷新 = Refresh
+報告 = Report
+俄語 = Russian
+評論 = Review
+請求 = Request
+重定向 = Redirect
+重定向 = Redirecting
+重定向 = Redirected
+宗教 = Religion
+= Rip
+= Ripped
+= Ripping
+= Riot
+= Rioting
+= Rioter
+= Rent
+= Renter
+= Renting
+= Rat
+= Rats
+= Ratted
+= Rattle
+= Rattling
+= Rattled
+= Requesting
+= Requested
+= Rope
+= Roping
+= Roped
+
+S section
+標誌 = Sign
+西班牙語 = Spanish
+暫停 = Suspended
+當然 = Sure
+腳本 = Script
+= South
+= Southern
+= Sip
+= So
+= Space
+= Series
+= Sent
+= Sending
+= Send
+= Sight
+= Site
+= Sighted
+= Sighting
+= Sapling
+= Sap
+= Slop
+= Sloppy
+= Soup
+= Suck
+= Sucked
+= Sucking
+= Sender
+= Slot
+= Slope
+= Slopes
+= Sling
+= Slinging
+= Slinged
+= Story
+= Stories
+= Silence
+= Silenced
+= Silencing
+= Snake
+= Snakes
+= Sheep
+= Sought
+= Soap
+= Soapy
+= Sad
+= Sadness
+= Sadder
+
+T section
+傳統 = Traditional
+= Time
+= Timer
+= Timed
+= Timing
+= Tip
+= Tips
+= Tipped
+= Tipping
+= Topping
+= Tube
+= Tubes
+= Tub
+= Tight
+= Tighter
+= Tightest
+= That
+= The
+= They
+= Tint
+= Tin
+
+U section
+用戶名 = Username
+上傳 = Upload
+= User
+= Up
+= Using
+= Used
+= Uploading
+= Uploaded
+= Uptime
+= Upper
+= Ukelele
+
+V section
+虛擬 = Virtual
+視頻 = Video
+視圖 = View
+查看 = Views
+= Vote
+= Voter
+= Voting
+= Very
+= Vroom
+= Vision
+= Visioned
+= Visioning
+= Virtually
+= Vile
+= Vintage
+
+W section
+寫 = Write
+歡迎 = Welcome
+捲筒紙 = Web
+寬 = Wide
+世界 = World
+工作 = Work
+= West
+= Western
+= Wrong
+= Wing
+= Winged
+= Winging
+= Wire
+= Wiring
+= Wired
+= Wise
+= Wiser
+= Wisest
+= Welsh
+= White
+= Whip
+= Whipping
+= Whipped
+= Wrote
+= Writing
+= Writer
+= Win
+= Won
+= Winning
+= Winner
+= Will
+= Willing
+= Woke
+= Warp
+= Warping
+= Warped
+= Window
+= Windows
+= Windowed
+= Wipe
+= Wiper
+= Wiped
+= Winter
+
+X section
+科薩 = Xhosa
+= Xylophone
+= Xenial
+
+Y section
+是 = Yes
+您 = You
+= Yeast
+= You're
+= Your
+= Youre
+= Yearn
+= Yearning
+= Yearned
+= Year
+= Years
+= Yin
+
+Z section
+拉鍊 = Zipped
+壓縮 = Zip
+= Zone
+= Zoned
+= Zen
+= Zap
+= Zapped
+= Zapping
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+RUSSIAN_TO_ENGLISH_TRANSLATOR
+
+A section
+= Amharic
+учетная запись = Account
+= a
+Около = About
+арабский = Arabic
+аудио = Audio
+Являются = Are
+= Apple
+= Alert
+
+B section
+блок = Block
+= blocked
+= blocking
+= blocker
+браузер = Browser
+= browsed
+= browsing
+= bow
+= bowed
+= book
+= bit
+= bite
+
+C section
+близко = Close
+китайский язык = Chinese
+соединять = Connect
+Комментарий = Comment
+Проверьте = Check
+= Clear
+= Clip
+= Caution
+= Cannot
+= Clearing
+= Clipped
+= Clipping
+= Checked
+= Checking
+
+D section
+Скачать = Download
+удалять = Delete
+= Distribution
+= Die
+= Death
+= Do
+= Diamond
+= Dive
+= Dived
+= Diving
+= Down
+
+E section
+английский = English
+исполнимый = Executable
+выполненный = Executed
+казнить = Execute
+проведение = Executing
+ошибка = Error
+= Errors
+= Earth
+= Emergency
+= East
+= Eastern
+
+F section
+Файл не найден = File not found
+друг = Friend
+Французский = French
+Свободно = Free
+файл = File
+файлы = Files
+= Fight
+= Fit
+= Fought
+= Fire
+= Fox
+= Flip
+= For
+
+G section
+Немецкий = German
+= Georgian
+= Greek
+= Gym
+= Gentle
+
+H section
+история = History
+= Hello
+= Hint
+= Hinting
+= Hinted
+= Hinge
+= Hinges
+= Hinged
+= Hinging
+= Hebrew
+= He
+= Him
+= Her
+= His
+= Hers
+
+I section
+Образ = Image
+интернет = Internet
+В = In
+= Ice
+= Icy
+= I
+= Integer
+= Integers
+= Imperial
+= Icelandic
+= Inch
+= Inches
+= Inching
+
+J section
+Просто = Just
+Япония = Japan
+японский язык = Japanese
+яс = Jar (not to be confused with the .jar java archive format)
+= Javanese
+= Jab
+= Jack
+= Jacking
+= Jacked
+= Jam
+= Jammed
+= Jarred
+= Jock
+= Junior
+= Jolly
+= Jelly
+= Jet
+= Jets
+= Jump
+= Jumped
+= Jumping
+
+K section
+Знания = Knowledge
+= Korean
+= Karate
+= Korea
+= Keep
+= Kind
+= Kindness
+= Keeper
+= Keeping
+= Kite
+= Kit
+= Kitten
+= Kiss
+= Kissed
+= Kissing
+= Kill
+= Killed
+= Killing
+= Killer
+= Kick
+= Kicked
+= Kicking
+= Kept
+= Kilt
+= Kennel
+= Kernel
+= Kelp
+= Karma
+
+L section
+язык = Language
+Журнал = Log
+Покидать = Leave
+петля = Loop
+= Left
+= Limb
+= Leg
+= Legs
+= Legging
+= Leggings
+= Limbs
+= Lime
+= Limes
+= Lemon
+= Lemons
+= Light
+= Lights
+= Lighting
+= Lit
+= Listen
+= Listening
+= Listener
+= Lip
+= Lips
+= Lick
+= Licks
+= Licking
+= Licked
+= Learn
+= Learning
+= Learnt
+= Laugh
+= Laughed
+= Laughing
+= Lack
+= Lacked
+= Lacking
+= Label
+= Labels
+= Labeling
+= Labeled
+= Lantern
+= Lanterns
+= Lesson
+= Lessons
+= Lust
+= Lamp
+= Lamps
+= Large
+= Larger
+= Largest
+= Lean
+= Leaner
+= Last
+= Lasted
+= Lasting
+= Long
+= Longer
+= Longest
+= Lightning
+= License
+= Licensing
+= Licensed
+= Listened
+= Land
+= Landed
+= Landing
+= Lao
+= Latin
+= Latvian
+= lithuanian
+= Luxembourgish
+= Line
+= Lines
+= Lined
+= Lap
+= Lapped
+= Lapping
+= Laps
+= Late
+= Later
+= Latest
+= Leather
+= Lane
+= Lock
+= Locked
+= Locking
+= Love
+= Loved
+= Loving
+= Lover
+= Less
+= Lesser
+= Lies
+= Lied
+= Liar
+= Lingering
+= Lash
+= Lashed
+= Lashing
+= Lame
+= Lamer
+= Lamest
+= Loom
+= Looming
+= Loomed
+= Larva
+= Local
+= Lore
+= Luring
+= Lure
+= Lead
+= Leading
+= Leader
+= Lake
+= Lakes
+= Leaf
+= Leaves
+= Let
+= Lonely
+= Liver
+= Lie
+= Lint
+= Live
+= Lively
+= Lived
+= Locally
+= Locust
+= Lobe
+= Lava
+= Loaf
+= Loaves
+= Lasso
+= Lab
+= Laboratory
+= Lube
+= Lubricant
+= Lice
+= Like
+= Liked
+= Liking
+= Lever
+= Leverage
+= Lessen
+= Least
+= Lease
+= Lavender
+= Lamb
+= Law
+= Lawyer
+= Laws
+= Lapis
+= Ladder
+= Look
+= Looking
+= Lawn
+= Leak
+= Leaking
+= Log
+= Logging
+= Lynch
+= Leach
+= Labyrinth
+= Lectern
+= Library
+= Librarian
+= Lag
+= Lagging
+= Loot
+= Looted
+= Looting
+= Life
+= Lad
+= Lend
+= Lending
+= Leap
+= Leaped
+= Leaping
+= Lard
+= Loss
+= Loose
+= Lose
+= Lost
+= Larry
+= Lurk
+= Lurker
+= Lurking
+= List
+= Listed
+= Listing
+= Lightbulb
+= Liability
+= Likeness
+= Lasting
+= Logged
+= Lawless
+= Leech
+= Luck
+= Lucky
+= Lumber
+= Luckiest
+= Luckier
+= Lot
+= Lots
+= Lurked
+= Liable
+= Liabilities
+= Led
+= Lump
+= Lumpy
+= Letter
+= Letters
+= Leprechaun
+= Lightweight
+= Literature
+= Literal
+= Literally
+= Leave
+= Leaving
+= Loser
+= Lone
+= Loner
+= Lighter
+= Libre
+= Lynching
+= Lynched
+= Legend
+= Legends
+= Legendary
+= Link
+= Linked
+= Linking
+= Links
+= Legacy
+= Logo
+= Logos
+= Load
+= Loaded
+= Loading
+= Loader
+= Level
+= Leveling
+= Leveled
+= Levels
+= Limited
+= Limit
+= Limiting
+= Limits
+= Lens
+= Lenses
+= Looping
+= Looped
+= Looper
+= Living
+= Lotion
+= Lotions
+= Little
+= Littlest
+= Littler
+= Litter
+= Limp
+= Limping
+= Lumps
+= Lumping
+= Lovely
+= Liter
+= Lid
+= London
+= Lingered
+= Linger
+= Lateral
+= legal
+= liquor
+= licorice
+= Lush
+= Liberty
+= Liberties
+= Libraries
+= Lawful
+= Lamborghini
+= Latter
+= Lilac
+= Lobby
+= Laptop
+= Loon
+= Loonie
+= Lifeguard
+= Loft
+= Lay
+
+M section
+Mozilla Firefox = Mozilla Firefox
+= More
+= Morning
+= Mint
+= Mending
+= Meant
+= Meaning
+= Mean
+= Meaner
+= Meanest
+= Middle
+= Modern
+= Mist
+= Might
+= Mighty
+= Mightiest
+= Moon
+= Map
+= Mapping
+= Mapped
+= Murder
+= Murderer
+= Murdering
+= Most
+= Met
+
+N section
+Небезопасно для работы = Not Safe For Work
+новый = New
+не = Not
+= North
+= No
+= Nope
+= Northern
+= Night
+= Nighttime
+= Nickel
+= Nine
+= Northwest
+= Northeast
+
+O section
+Из = Out
+= Output
+= Outer
+= Opinion
+= Opinions
+= Onion
+= Onions
+= Or
+= Ore
+= Okay
+= Oh
+= Oops
+= Over
+= Oat
+= Oats
+= Outran
+= Outrun
+
+P section
+Картина = Picture
+= Pine
+= Point
+= Pointed
+= Pointed
+= Pint
+= Plant
+= Planting
+= Planted
+= Pin
+= Pinned
+= Pinning
+= Pie
+= Pit
+= Pick
+= Picked
+= Picking
+
+Q section
+Качественный = Quality
+= Quote
+= Quota
+= Quit
+= Quitter
+= Quitting
+= Question
+= Questions
+= Questioned
+= Questioning
+= Quiet
+= Quite
+= Quiter
+= Quietest
+= Quoting
+= Quoted
+
+R section
+обновление = Refresh
+русский = Russian
+Обзор = Review
+отчет = Report
+Запрос = Request
+переадресовывать = Redirect
+Перенаправление = Redirecting
+Перенаправлено = Redirected
+религия = Religion
+= Rip
+= Ripped
+= Ripping
+= Riot
+= Rioting
+= Rioter
+= Rent
+= Renter
+= Renting
+= Rat
+= Rats
+= Ratted
+= Rattle
+= Rattling
+= Rattled
+= Requesting
+= Requested
+= Rope
+= Roping
+= Roped
+
+S section
+Знак = Sign
+испанский = Spanish
+подвешенный = Suspended
+Конечно = Sure
+скрипт = Script
+= South
+= Southern
+= Sip
+= So
+= Space
+= Series
+= Sent
+= Sending
+= Send
+= Sight
+= Site
+= Sighted
+= Sighting
+= Sapling
+= Sap
+= Slop
+= Sloppy
+= Soup
+= Suck
+= Sucked
+= Sucking
+= Sender
+= Slot
+= Slope
+= Slopes
+= Sling
+= Slinging
+= Slinged
+= Story
+= Stories
+= Silence
+= Silenced
+= Silencing
+= Snake
+= Snakes
+= Sheep
+= Sought
+= Soap
+= Soapy
+= Sad
+= Sadness
+= Sadder
+
+T section
+традиционный = Traditional
+= Time
+= Timer
+= Timed
+= Timing
+= Tip
+= Tips
+= Tipped
+= Tipping
+= Topping
+= Tube
+= Tubes
+= Tub
+= Tight
+= Tighter
+= Tightest
+= That
+= The
+= They
+= Tint
+= Tin
+
+U section
+имя пользователя = Username
+Загрузить = Upload
+= User
+= User
+= Up
+= Using
+= Used
+= Uploading
+= Uploaded
+= Uptime
+= Upper
+= Ukelele
+
+V section
+виртуальный = Virtual
+видео = Video
+Посмотреть = View
+Просмотры = Views
+= Vote
+= Voter
+= Voting
+= Very
+= Vroom
+= Vision
+= Visioned
+= Visioning
+= Virtually
+= Vile
+= Vintage
+
+W section
+желанный = Welcome
+Написать = Write
+Web = Web
+Широкий = Wide
+Мир = World
+Работа = Work
+= West
+= Western
+= Wrong
+= Wing
+= Winged
+= Winging
+= Wire
+= Wiring
+= Wired
+= Wise
+= Wiser
+= Wisest
+= Welsh
+= White
+= Whip
+= Whipping
+= Whipped
+= Wrote
+= Writing
+= Writer
+= Win
+= Won
+= Winning
+= Winner
+= Will
+= Willing
+= Woke
+= Warp
+= Warping
+= Warped
+= Window
+= Windows
+= Windowed
+= Wipe
+= Wiper
+= Wiped
+= Winter
+
+X section
+Кос = Xhosa
+= Xylophone
+= Xenial
+
+Y section
+да = Yes
+Вы = You
+= Yeast
+= You're
+= Your
+= Youre
+= Yearn
+= Yearning
+= Yearned
+= Year
+= Years
+= Yin
+
+Z section
+Сжатые = Zipped
+застежка-молния = Zip
+= Zone
+= Zoned
+= Zen
+= Zap
+= Zapped
+= Zapping
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+GEORGIAN_TO_ENGLISH_TRANSLATOR
+
+A section
+
+ამჰარული = Amharic
+ანგარიში = account
+ა = a
+შესახებ = about
+არაბული = arabic
+არიან = are
+= Apple
+= Alert
+
+B section
+
+დაბლოკვა = block
+დაბლოკილია = blocked
+ბლოკირება = blocking
+ბლოკატორი = blocker
+ბრაუზერი = browser
+დაათვალიერა = browsed
+დათვალიერება = browsing
+მშვილდი = bow
+მშვილდი = bowed
+წიგნი = book
+ცოტა = bit
+ნაკბენი = bite
+
+C section
+
+ახლოს = close
+ჩინური = chinese
+დაკავშირება = connect
+კომენტარი = comment
+ჩეკი = check
+= Clear
+= Clip
+= Caution
+= Cannot
+= Clearing
+= Clipped
+= Clipping
+= Checked
+= Checking
+
+D section
+
+ჩამოტვირთვა = download
+წაშლა = delete
+= Distribution
+= Die
+= Death
+= Do
+= Diamond
+= Dive
+= Dived
+= Diving
+= Down
+
+E section
+
+ინგლისური = English
+შესრულებადი = Executable
+შესრულებული = Executed
+შეასრულოს = Execute
+შესრულება = Executing
+შეცდომა = Error
+= Errors
+= Earth
+= Emergency
+= East
+= Eastern
+
+F section
+
+ფაილი არ მოიძებნა = File not found 
+მეგობარო = Friend
+ფრანგული = French
+უფასო = Free
+ფაილები = Files
+ფაილი = File
+= Fight
+= Fit
+= Fought
+= Fire
+= Fox
+= Flip
+= For
+
+G section
+
+გერმანული = German
+ქართული = Georgian
+ბერძნული = Greek
+= Gym
+= Gentle
+
+H section
+
+ისტორია = History
+= Hello
+= Hint
+= Hinting
+= Hinted
+= Hinge
+= Hinges
+= Hinged
+= Hinging
+= Hebrew
+= He
+= Him
+= Her
+= His
+= Hers
+
+I section
+
+გამოსახულება = Image
+ინტერნეტი = Internet
+შიგნით = In
+= Ice
+= Icy
+= I
+= Integer
+= Integers
+= Imperial
+= Icelandic
+= Inch
+= Inches
+= Inching
+
+J section
+
+უბრალოდ = Just
+იაპონია = Japan
+იაპონელი = Japanese
+ქილა = Jar
+= Javanese
+= Jab
+= Jack
+= Jacking
+= Jacked
+= Jam
+= Jammed
+= Jarred
+= Jock
+= Junior
+= Jolly
+= Jelly
+= Jet
+= Jets
+= Jump
+= Jumped
+= Jumping
+
+K section
+
+ცოდნა = Knowledge
+= Korean
+= Karate
+= Korea
+= Keep
+= Kind
+= Kindness
+= Keeper
+= Keeping
+= Kite
+= Kit
+= Kitten
+= Kiss
+= Kissed
+= Kissing
+= Kill
+= Killed
+= Killing
+= Killer
+= Kick
+= Kicked
+= Kicking
+= Kept
+= Kilt
+= Kennel
+= Kernel
+= Kelp
+= Karma
+
+L section
+
+ენა = Language
+ჟურნალი = Log
+დატოვე = Leave
+მარყუჟი = Loop
+= Left
+= Limb
+= Leg
+= Legs
+= Legging
+= Leggings
+= Limbs
+= Lime
+= Limes
+= Lemon
+= Lemons
+= Light
+= Lights
+= Lighting
+= Lit
+= Listen
+= Listening
+= Listener
+= Lip
+= Lips
+= Lick
+= Licks
+= Licking
+= Licked
+= Learn
+= Learning
+= Learnt
+= Laugh
+= Laughed
+= Laughing
+= Lack
+= Lacked
+= Lacking
+= Label
+= Labels
+= Labeling
+= Labeled
+= Lantern
+= Lanterns
+= Lesson
+= Lessons
+= Lust
+= Lamp
+= Lamps
+= Large
+= Larger
+= Largest
+= Lean
+= Leaner
+= Last
+= Lasted
+= Lasting
+= Long
+= Longer
+= Longest
+= Lightning
+= License
+= Licensing
+= Licensed
+= Listened
+= Land
+= Landed
+= Landing
+= Lao
+= Latin
+= Latvian
+= lithuanian
+= Luxembourgish
+= Line
+= Lines
+= Lined
+= Lap
+= Lapped
+= Lapping
+= Laps
+= Late
+= Later
+= Latest
+= Leather
+= Lane
+= Lock
+= Locked
+= Locking
+= Love
+= Loved
+= Loving
+= Lover
+= Less
+= Lesser
+= Lies
+= Lied
+= Liar
+= Lingering
+= Lash
+= Lashed
+= Lashing
+= Lame
+= Lamer
+= Lamest
+= Loom
+= Looming
+= Loomed
+= Larva
+= Local
+= Lore
+= Luring
+= Lure
+= Lead
+= Leading
+= Leader
+= Lake
+= Lakes
+= Leaf
+= Leaves
+= Let
+= Lonely
+= Liver
+= Lie
+= Lint
+= Live
+= Lively
+= Lived
+= Locally
+= Locust
+= Lobe
+= Lava
+= Loaf
+= Loaves
+= Lasso
+= Lab
+= Laboratory
+= Lube
+= Lubricant
+= Lice
+= Like
+= Liked
+= Liking
+= Lever
+= Leverage
+= Lessen
+= Least
+= Lease
+= Lavender
+= Lamb
+= Law
+= Lawyer
+= Laws
+= Lapis
+= Ladder
+= Look
+= Looking
+= Lawn
+= Leak
+= Leaking
+= Log
+= Logging
+= Lynch
+= Leach
+= Labyrinth
+= Lectern
+= Library
+= Librarian
+= Lag
+= Lagging
+= Loot
+= Looted
+= Looting
+= Life
+= Lad
+= Lend
+= Lending
+= Leap
+= Leaped
+= Leaping
+= Lard
+= Loss
+= Loose
+= Lose
+= Lost
+= Larry
+= Lurk
+= Lurker
+= Lurking
+= List
+= Listed
+= Listing
+= Lightbulb
+= Liability
+= Likeness
+= Lasting
+= Logged
+= Lawless
+= Leech
+= Luck
+= Lucky
+= Lumber
+= Luckiest
+= Luckier
+= Lot
+= Lots
+= Lurked
+= Liable
+= Liabilities
+= Led
+= Lump
+= Lumpy
+= Letter
+= Letters
+= Leprechaun
+= Lightweight
+= Literature
+= Literal
+= Literally
+= Leave
+= Leaving
+= Loser
+= Lone
+= Loner
+= Lighter
+= Libre
+= Lynching
+= Lynched
+= Legend
+= Legends
+= Legendary
+= Link
+= Linked
+= Linking
+= Links
+= Legacy
+= Logo
+= Logos
+= Load
+= Loaded
+= Loading
+= Loader
+= Level
+= Leveling
+= Leveled
+= Levels
+= Limited
+= Limit
+= Limiting
+= Limits
+= Lens
+= Lenses
+= Looping
+= Looped
+= Looper
+= Living
+= Lotion
+= Lotions
+= Little
+= Littlest
+= Littler
+= Litter
+= Limp
+= Limping
+= Lumps
+= Lumping
+= Lovely
+= Liter
+= Lid
+= London
+= Lingered
+= Linger
+= Lateral
+= legal
+= liquor
+= licorice
+= Lush
+= Liberty
+= Liberties
+= Libraries
+= Lawful
+= Lamborghini
+= Latter
+= Lilac
+= Lobby
+= Laptop
+= Loon
+= Loonie
+= Lifeguard
+= Loft
+= Lay
+
+M section
+
+mozilla firefox = Mozilla Firefox
+= More
+= Morning
+= Mint
+= Mending
+= Meant
+= Meaning
+= Mean
+= Meaner
+= Meanest
+= Middle
+= Modern
+= Mist
+= Might
+= Mighty
+= Mightiest
+= Moon
+= Map
+= Mapping
+= Mapped
+= Murder
+= Murderer
+= Murdering
+= Most
+= Met
+
+N section
+
+უსაფრთხო არ არის სამუშაო = Not Safe For Work
+ახალი = New
+არა = Not
+= North
+= No
+= Nope
+= Northern
+= Night
+= Nighttime
+= Nickel
+= Nine
+= Northwest
+= Northeast
+
+O section
+
+გარეთ = Out
+= Output
+= Outer
+= Opinion
+= Opinions
+= Onion
+= Onions
+= Or
+= Ore
+= Okay
+= Oh
+= Oops
+= Over
+= Oat
+= Oats
+= Outran
+= Outrun
+
+P section
+
+სურათი = Picture
+= Pine
+= Point
+= Pointed
+= Pointed
+= Pint
+= Plant
+= Planting
+= Planted
+= Pin
+= Pinned
+= Pinning
+= Pie
+= Pit
+= Pick
+= Picked
+= Picking
+
+Q section
+
+ხარისხი = Quality
+= Quote
+= Quota
+= Quit
+= Quitter
+= Quitting
+= Question
+= Questions
+= Questioned
+= Questioning
+= Quiet
+= Quite
+= Quiter
+= Quietest
+= Quoting
+= Quoted
+
+R section
+
+განახლება = Refresh
+რუსი = Russian
+მიმოხილვა = Review
+მოხსენება = Report
+თხოვნა = Request
+გადამისამართება = Redirect
+გადამისამართება = Redirected
+გადამისამართება = Redirecting
+რელიგია = Religion
+= Rip
+= Ripped
+= Ripping
+= Riot
+= Rioting
+= Rioter
+= Rent
+= Renter
+= Renting
+= Rat
+= Rats
+= Ratted
+= Rattle
+= Rattling
+= Rattled
+= Requesting
+= Requested
+= Rope
+= Roping
+= Roped
+
+S section
+
+ნიშანი = Sign
+ესპანური = Spanish
+შეჩერებულია = Suspended
+ნამდვილად = Sure
+დამწერლობა = Script
+= South
+= Southern
+= Sip
+= So
+= Space
+= Series
+= Sent
+= Sending
+= Send
+= Sight
+= Site
+= Sighted
+= Sighting
+= Sapling
+= Sap
+= Slop
+= Sloppy
+= Soup
+= Suck
+= Sucked
+= Sucking
+= Sender
+= Slot
+= Slope
+= Slopes
+= Sling
+= Slinging
+= Slinged
+= Story
+= Stories
+= Silence
+= Silenced
+= Silencing
+= Snake
+= Snakes
+= Sheep
+= Sought
+= Soap
+= Soapy
+= Sad
+= Sadness
+= Sadder
+
+T section
+
+ტრადიციული = Traditional
+= Time
+= Timer
+= Timed
+= Timing
+= Tip
+= Tips
+= Tipped
+= Tipping
+= Topping
+= Tube
+= Tubes
+= Tub
+= Tight
+= Tighter
+= Tightest
+= That
+= The
+= They
+= Tint
+= Tin
+
+U section
+
+მომხმარებლის სახელი = Username
+ატვირთვა = Upload
+მომხმარებელი = User
+= User
+= Up
+= Using
+= Used
+= Uploading
+= Uploaded
+= Uptime
+= Upper
+= Ukelele
+
+V section
+
+ვირტუალური = Virtual
+ვიდეო = Video
+ხედი = View
+დათვალიერება = Views
+= Vote
+= Voter
+= Voting
+= Very
+= Vroom
+= Vision
+= Visioned
+= Visioning
+= Virtually
+= Vile
+= Vintage
+
+W section
+
+მოგესალმებით = Welcome
+დაწერე = Write
+ვებ = Web
+ფართო = Wide
+სამყარო = World
+მუშაობა = Work
+= West
+= Western
+= Wrong
+= Wing
+= Winged
+= Winging
+= Wire
+= Wiring
+= Wired
+= Wise
+= Wiser
+= Wisest
+= Welsh
+= White
+= Whip
+= Whipping
+= Whipped
+= Wrote
+= Writing
+= Writer
+= Win
+= Won
+= Winning
+= Winner
+= Will
+= Willing
+= Woke
+= Warp
+= Warping
+= Warped
+= Window
+= Windows
+= Windowed
+= Wipe
+= Wiper
+= Wiped
+= Winter
+
+X section
+
+ჟოზა = Xhosa
+= Xylophone
+= Xenial
+
+Y section
+
+დიახ = Yes
+შენ = You
+= Yeast
+= You're
+= Your
+= Youre
+= Yearn
+= Yearning
+= Yearned
+= Year
+= Years
+= Yin
+
+Z section
+
+zip = Zip
+გადაშალა = Zipped
+= Zone
+= Zoned
+= Zen
+= Zap
+= Zapped
+= Zapping
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+GREEK_TO_ENGLISH_TRANSLATOR
+
+A section
+
+amharic = Amharic
+λογαριασμός = account
+ένα = a
+σχετικά με = about
+αραβικός = arabic
+είναι = are
+= Apple
+= Alert
+
+B section
+
+ΟΙΚΟΔΟΜΙΚΟ ΤΕΤΡΑΓΩΝΟ = block
+μπλοκαριστεί = blocked
+μπλοκάρισμα = blocking
+αποκλεισμού = blocker
+browser = browser
+περιηγηθείτε = browsed
+περιήγηση = browsing
+τόξο = bow
+σκυφτός = bowed
+Βιβλίο = book
+κομμάτι = bit
+δάγκωμα = bite
+
+C section
+
+Κοντά = close
+κινέζικα = chinese
+συνδέω-συωδεομαι = connect
+σχόλιο = comment
+έλεγχος = check
+= Clear
+= Clip
+= Caution
+= Cannot
+= Clearing
+= Clipped
+= Clipping
+= Checked
+= Checking
+
+D section
+
+= download
+= delete
+= Distribution
+= Die
+= Death
+= Do
+= Diamond
+= Dive
+= Dived
+= Diving
+= Down
+
+E section
+
+= English
+= Executable
+= Executed
+= Execute
+= Executing
+= Error
+= Errors
+= Earth
+= Emergency
+= East
+= Eastern
+
+F section
+
+= File not found 
+= Friend
+= French
+= Free
+= Files
+= File
+= Fight
+= Fit
+= Fought
+= Fire
+= Fox
+= Flip
+= For
+
+G section
+
+= German
+= Georgian
+= Greek
+= Gym
+= Gentle
+
+H section
+
+= History
+= Hello
+= Hint
+= Hinting
+= Hinted
+= Hinge
+= Hinges
+= Hinged
+= Hinging
+= Hebrew
+= He
+= Him
+= Her
+= His
+= Hers
+
+I section
+
+= Image
+= Internet
+= In
+= Ice
+= Icy
+= I
+= Integer
+= Integers
+= Imperial
+= Icelandic
+= Inch
+= Inches
+= Inching
+
+J section
+
+= Just
+= Japan
+= Japanese
+= Jar
+= Javanese
+= Jab
+= Jack
+= Jacking
+= Jacked
+= Jam
+= Jammed
+= Jarred
+= Jock
+= Junior
+= Jolly
+= Jelly
+= Jet
+= Jets
+= Jump
+= Jumped
+= Jumping
+
+K section
+
+= Knowledge
+= Korean
+= Karate
+= Korea
+= Keep
+= Kind
+= Kindness
+= Keeper
+= Keeping
+= Kite
+= Kit
+= Kitten
+= Kiss
+= Kissed
+= Kissing
+= Kill
+= Killed
+= Killing
+= Killer
+= Kick
+= Kicked
+= Kicking
+= Kept
+= Kilt
+= Kennel
+= Kernel
+= Kelp
+= Karma
+
+L section
+
+= Language
+= Log
+= Leave
+= Loop
+= Left
+= Limb
+= Leg
+= Legs
+= Legging
+= Leggings
+= Limbs
+= Lime
+= Limes
+= Lemon
+= Lemons
+= Light
+= Lights
+= Lighting
+= Lit
+= Listen
+= Listening
+= Listener
+= Lip
+= Lips
+= Lick
+= Licks
+= Licking
+= Licked
+= Learn
+= Learning
+= Learnt
+= Laugh
+= Laughed
+= Laughing
+= Lack
+= Lacked
+= Lacking
+= Label
+= Labels
+= Labeling
+= Labeled
+= Lantern
+= Lanterns
+= Lesson
+= Lessons
+= Lust
+= Lamp
+= Lamps
+= Large
+= Larger
+= Largest
+= Lean
+= Leaner
+= Last
+= Lasted
+= Lasting
+= Long
+= Longer
+= Longest
+= Lightning
+= License
+= Licensing
+= Licensed
+= Listened
+= Land
+= Landed
+= Landing
+= Lao
+= Latin
+= Latvian
+= lithuanian
+= Luxembourgish
+= Line
+= Lines
+= Lined
+= Lap
+= Lapped
+= Lapping
+= Laps
+= Late
+= Later
+= Latest
+= Leather
+= Lane
+= Lock
+= Locked
+= Locking
+= Love
+= Loved
+= Loving
+= Lover
+= Less
+= Lesser
+= Lies
+= Lied
+= Liar
+= Lingering
+= Lash
+= Lashed
+= Lashing
+= Lame
+= Lamer
+= Lamest
+= Loom
+= Looming
+= Loomed
+= Larva
+= Local
+= Lore
+= Luring
+= Lure
+= Lead
+= Leading
+= Leader
+= Lake
+= Lakes
+= Leaf
+= Leaves
+= Let
+= Lonely
+= Liver
+= Lie
+= Lint
+= Live
+= Lively
+= Lived
+= Locally
+= Locust
+= Lobe
+= Lava
+= Loaf
+= Loaves
+= Lasso
+= Lab
+= Laboratory
+= Lube
+= Lubricant
+= Lice
+= Like
+= Liked
+= Liking
+= Lever
+= Leverage
+= Lessen
+= Least
+= Lease
+= Lavender
+= Lamb
+= Law
+= Lawyer
+= Laws
+= Lapis
+= Ladder
+= Look
+= Looking
+= Lawn
+= Leak
+= Leaking
+= Log
+= Logging
+= Lynch
+= Leach
+= Labyrinth
+= Lectern
+= Library
+= Librarian
+= Lag
+= Lagging
+= Loot
+= Looted
+= Looting
+= Life
+= Lad
+= Lend
+= Lending
+= Leap
+= Leaped
+= Leaping
+= Lard
+= Loss
+= Loose
+= Lose
+= Lost
+= Larry
+= Lurk
+= Lurker
+= Lurking
+= List
+= Listed
+= Listing
+= Lightbulb
+= Liability
+= Likeness
+= Lasting
+= Logged
+= Lawless
+= Leech
+= Luck
+= Lucky
+= Lumber
+= Luckiest
+= Luckier
+= Lot
+= Lots
+= Lurked
+= Liable
+= Liabilities
+= Led
+= Lump
+= Lumpy
+= Letter
+= Letters
+= Leprechaun
+= Lightweight
+= Literature
+= Literal
+= Literally
+= Leave
+= Leaving
+= Loser
+= Lone
+= Loner
+= Lighter
+= Libre
+= Lynching
+= Lynched
+= Legend
+= Legends
+= Legendary
+= Link
+= Linked
+= Linking
+= Links
+= Legacy
+= Logo
+= Logos
+= Load
+= Loaded
+= Loading
+= Loader
+= Level
+= Leveling
+= Leveled
+= Levels
+= Limited
+= Limit
+= Limiting
+= Limits
+= Lens
+= Lenses
+= Looping
+= Looped
+= Looper
+= Living
+= Lotion
+= Lotions
+= Little
+= Littlest
+= Littler
+= Litter
+= Limp
+= Limping
+= Lumps
+= Lumping
+= Lovely
+= Liter
+= Lid
+= legal
+= liquor
+= licorice
+= Lush
+= Liberty
+= Liberties
+= Libraries
+= Lawful
+= Lamborghini
+= Latter
+= Lilac
+= Lobby
+= Laptop
+= Loon
+= Loonie
+= Lifeguard
+= Loft
+= Lay
+
+M section
+
+= Mozilla Firefox
+= More
+= Morning
+= Mint
+= Mending
+= Meant
+= Meaning
+= Mean
+= Meaner
+= Meanest
+= Middle
+= Modern
+= Mist
+= Might
+= Mighty
+= Mightiest
+= Moon
+= Map
+= Mapping
+= Mapped
+= Murder
+= Murderer
+= Murdering
+= Most
+= Met
+
+N section
+
+= Not Safe For Work
+= New
+= Not
+= North
+= No
+= Nope
+= Northern
+= Night
+= Nighttime
+= Nickel
+= Nine
+= Northwest
+= Northeast
+
+O section
+
+= Out
+= Output
+= Outer
+= Opinion
+= Opinions
+= Onion
+= Onions
+= Or
+= Ore
+= Okay
+= Oh
+= Oops
+= Over
+= Oat
+= Oats
+= Outran
+= Outrun
+
+P section
+
+= Picture
+= Pine
+= Point
+= Pointed
+= Pointed
+= Pint
+= Plant
+= Planting
+= Planted
+= Pin
+= Pinned
+= Pinning
+= Pie
+= Pit
+= Pick
+= Picked
+= Picking
+
+Q section
+
+= Quality
+= Quote
+= Quota
+= Quit
+= Quitter
+= Quitting
+= Question
+= Questions
+= Questioned
+= Questioning
+= Quiet
+= Quite
+= Quiter
+= Quietest
+= Quoting
+= Quoted
+
+R section
+
+= Refresh
+= Russian
+= Review
+= Report
+= Request
+= Redirect
+= Redirected
+= Redirecting
+= Religion
+= Rip
+= Ripped
+= Ripping
+= Riot
+= Rioting
+= Rioter
+= Rent
+= Renter
+= Renting
+= Rat
+= Rats
+= Ratted
+= Rattle
+= Rattling
+= Rattled
+= Requesting
+= Requested
+= Rope
+= Roping
+= Roped
+
+S section
+
+= Sign
+= Spanish
+= Suspended
+= Sure
+= Script
+= South
+= Southern
+= Sip
+= So
+= Space
+= Series
+= Sent
+= Sending
+= Send
+= Sight
+= Site
+= Sighted
+= Sighting
+= Sapling
+= Sap
+= Slop
+= Sloppy
+= Soup
+= Suck
+= Sucked
+= Sucking
+= Sender
+= Slot
+= Slope
+= Slopes
+= Sling
+= Slinging
+= Slinged
+= Story
+= Stories
+= Silence
+= Silenced
+= Silencing
+= Snake
+= Snakes
+= Sheep
+= Sought
+= Soap
+= Soapy
+= Sad
+= Sadness
+= Sadder
+
+T section
+
+= Traditional
+= Time
+= Timer
+= Timed
+= Timing
+= Tip
+= Tips
+= Tipped
+= Tipping
+= Topping
+= Tube
+= Tubes
+= Tub
+= Tight
+= Tighter
+= Tightest
+= That
+= The
+= They
+= Tint
+= Tin
+
+U section
+
+= Username
+= Upload
+= User
+= User
+= Up
+= Using
+= Used
+= Uploading
+= Uploaded
+= Uptime
+= Upper
+= Ukelele
+
+V section
+
+= Virtual
+= Video
+= View
+= Views
+= Vote
+= Voter
+= Voting
+= Very
+= Vroom
+= Vision
+= Visioned
+= Visioning
+= Virtually
+= Vile
+= Vintage
+
+W section
+
+= Welcome
+= Write
+= Web
+= Wide
+= World
+= Work
+= West
+= Western
+= Wrong
+= Wing
+= Winged
+= Winging
+= Wire
+= Wiring
+= Wired
+= Wise
+= Wiser
+= Wisest
+= Welsh
+= White
+= Whip
+= Whipping
+= Whipped
+= Wrote
+= Writing
+= Writer
+= Win
+= Won
+= Winning
+= Winner
+= Will
+= Willing
+= Woke
+= Warp
+= Warping
+= Warped
+= Window
+= Windows
+= Windowed
+= Wipe
+= Wiper
+= Wiped
+= Winter
+
+X section
+
+= Xhosa
+= Xylophone
+= Xenial
+
+Y section
+
+= Yes
+= You
+= Yeast
+= You're
+= Your
+= Youre
+= Yearn
+= Yearning
+= Yearned
+= Year
+= Years
+= Yin
+
+Z section
+
+= Zip
+= Zipped
+= Zone
+= Zoned
+= Zen
+= Zap
+= Zapped
+= Zapping
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+AMHARIC_TO_ENGLISH_TRANSLATOR
+
+A section
+
+አማርኛ = Amharic
+መለያ = account
+ሀ = a
+ስለ = about
+አረብኛ = arabic
+ናቸው። = are
+= Apple
+= Alert
+
+B section
+
+አግድ = block
+ታግ .ል = blocked
+ማገድ = blocking
+አግድ = blocker
+አሳሽ። = browser
+አሰሳ። = browsed
+ማሰስ = browsing
+ቀስት = bow
+ተንበረከከ = bowed
+መጽሐፍ = book
+ትንሽ። = bit
+ንክሻ። = bite
+
+C section
+
+= close
+= chinese
+= connect
+= comment
+= check
+= Clear
+= Clip
+= Caution
+= Cannot
+= Clearing
+= Clipped
+= Clipping
+= Checked
+= Checking
+
+D section
+
+= download
+= delete
+= Distribution
+= Die
+= Death
+= Do
+= Diamond
+= Dive
+= Dived
+= Diving
+= Down
+
+E section
+
+= English
+= Executable
+= Executed
+= Execute
+= Executing
+= Error
+= Errors
+= Earth
+= Emergency
+= East
+= Eastern
+
+F section
+
+= File not found 
+= Friend
+= French
+= Free
+= Files
+= File
+= Fight
+= Fit
+= Fought
+= Fire
+= Fox
+= Flip
+= For
+
+G section
+
+= German
+= Georgian
+= Greek
+= Gym
+= Gentle
+
+H section
+
+= History
+= Hello
+= Hint
+= Hinting
+= Hinted
+= Hinge
+= Hinges
+= Hinged
+= Hinging
+= Hebrew
+= He
+= Him
+= Her
+= His
+= Hers
+
+I section
+
+= Image
+= Internet
+= In
+= Ice
+= Icy
+= I
+= Integer
+= Integers
+= Imperial
+= Icelandic
+= Inch
+= Inches
+= Inching
+
+J section
+
+= Just
+= Japan
+= Japanese
+= Jar
+= Javanese
+= Jab
+= Jack
+= Jacking
+= Jacked
+= Jam
+= Jammed
+= Jarred
+= Jock
+= Junior
+= Jolly
+= Jelly
+= Jet
+= Jets
+= Jump
+= Jumped
+= Jumping
+
+K section
+
+= Knowledge
+= Korean
+= Karate
+= Korea
+= Keep
+= Kind
+= Kindness
+= Keeper
+= Keeping
+= Kite
+= Kit
+= Kitten
+= Kiss
+= Kissed
+= Kissing
+= Kill
+= Killed
+= Killing
+= Killer
+= Kick
+= Kicked
+= Kicking
+= Kept
+= Kilt
+= Kennel
+= Kernel
+= Kelp
+= Karma
+
+L section
+
+= Language
+= Log
+= Leave
+= Loop
+= Left
+= Limb
+= Leg
+= Legs
+= Legging
+= Leggings
+= Limbs
+= Lime
+= Limes
+= Lemon
+= Lemons
+= Light
+= Lights
+= Lighting
+= Lit
+= Listen
+= Listening
+= Listener
+= Lip
+= Lips
+= Lick
+= Licks
+= Licking
+= Licked
+= Learn
+= Learning
+= Learnt
+= Laugh
+= Laughed
+= Laughing
+= Lack
+= Lacked
+= Lacking
+= Label
+= Labels
+= Labeling
+= Labeled
+= Lantern
+= Lanterns
+= Lesson
+= Lessons
+= Lust
+= Lamp
+= Lamps
+= Large
+= Larger
+= Largest
+= Lean
+= Leaner
+= Last
+= Lasted
+= Lasting
+= Long
+= Longer
+= Longest
+= Lightning
+= License
+= Licensing
+= Licensed
+= Listened
+= Land
+= Landed
+= Landing
+= Lao
+= Latin
+= Latvian
+= lithuanian
+= Luxembourgish
+= Line
+= Lines
+= Lined
+= Lap
+= Lapped
+= Lapping
+= Laps
+= Late
+= Later
+= Latest
+= Leather
+= Lane
+= Lock
+= Locked
+= Locking
+= Love
+= Loved
+= Loving
+= Lover
+= Less
+= Lesser
+= Lies
+= Lied
+= Liar
+= Lingering
+= Lash
+= Lashed
+= Lashing
+= Lame
+= Lamer
+= Lamest
+= Loom
+= Looming
+= Loomed
+= Larva
+= Local
+= Lore
+= Luring
+= Lure
+= Lead
+= Leading
+= Leader
+= Lake
+= Lakes
+= Leaf
+= Leaves
+= Let
+= Lonely
+= Liver
+= Lie
+= Lint
+= Live
+= Lively
+= Lived
+= Locally
+= Locust
+= Lobe
+= Lava
+= Loaf
+= Loaves
+= Lasso
+= Lab
+= Laboratory
+= Lube
+= Lubricant
+= Lice
+= Like
+= Liked
+= Liking
+= Lever
+= Leverage
+= Lessen
+= Least
+= Lease
+= Lavender
+= Lamb
+= Law
+= Lawyer
+= Laws
+= Lapis
+= Ladder
+= Look
+= Looking
+= Lawn
+= Leak
+= Leaking
+= Log
+= Logging
+= Lynch
+= Leach
+= Labyrinth
+= Lectern
+= Library
+= Librarian
+= Lag
+= Lagging
+= Loot
+= Looted
+= Looting
+= Life
+= Lad
+= Lend
+= Lending
+= Leap
+= Leaped
+= Leaping
+= Lard
+= Loss
+= Loose
+= Lose
+= Lost
+= Larry
+= Lurk
+= Lurker
+= Lurking
+= List
+= Listed
+= Listing
+= Lightbulb
+= Liability
+= Likeness
+= Lasting
+= Logged
+= Lawless
+= Leech
+= Luck
+= Lucky
+= Lumber
+= Luckiest
+= Luckier
+= Lot
+= Lots
+= Lurked
+= Liable
+= Liabilities
+= Led
+= Lump
+= Lumpy
+= Letter
+= Letters
+= Leprechaun
+= Lightweight
+= Literature
+= Literal
+= Literally
+= Leave
+= Leaving
+= Loser
+= Lone
+= Loner
+= Lighter
+= Libre
+= Lynching
+= Lynched
+= Legend
+= Legends
+= Legendary
+= Link
+= Linked
+= Linking
+= Links
+= Legacy
+= Logo
+= Logos
+= Load
+= Loaded
+= Loading
+= Loader
+= Level
+= Leveling
+= Leveled
+= Levels
+= Limited
+= Limit
+= Limiting
+= Limits
+= Lens
+= Lenses
+= Looping
+= Looped
+= Looper
+= Living
+= Lotion
+= Lotions
+= Little
+= Littlest
+= Littler
+= Litter
+= Limp
+= Limping
+= Lumps
+= Lumping
+= Lovely
+= Liter
+= Lid
+= London
+= Lingered
+= Linger
+= Lateral
+= legal
+= liquor
+= licorice
+= Lush
+= Liberty
+= Liberties
+= Libraries
+= Lawful
+= Lamborghini
+= Latter
+= Lilac
+= Lobby
+= Laptop
+= Loon
+= Loonie
+= Lifeguard
+= Loft
+= Lay
+
+M section
+
+= Mozilla Firefox
+= More
+= Morning
+= Mint
+= Mending
+= Meant
+= Meaning
+= Mean
+= Meaner
+= Meanest
+= Middle
+= Modern
+= Mist
+= Might
+= Mighty
+= Mightiest
+= Moon
+= Map
+= Mapping
+= Mapped
+= Murder
+= Murderer
+= Murdering
+= Most
+= Met
+
+N section
+
+= Not Safe For Work
+= New
+= Not
+= North
+= No
+= Nope
+= Northern
+= Night
+= Nighttime
+= Nickel
+= Nine
+= Northwest
+= Northeast
+
+O section
+
+= Out
+= Output
+= Outer
+= Opinion
+= Opinions
+= Onion
+= Onions
+= Or
+= Ore
+= Okay
+= Oh
+= Oops
+= Over
+= Oat
+= Oats
+= Outran
+= Outrun
+
+P section
+
+= Picture
+= Pine
+= Point
+= Pointed
+= Pointed
+= Pint
+= Plant
+= Planting
+= Planted
+= Pin
+= Pinned
+= Pinning
+= Pie
+= Pit
+= Pick
+= Picked
+= Picking
+
+Q section
+
+= Quality
+= Quote
+= Quota
+= Quit
+= Quitter
+= Quitting
+= Question
+= Questions
+= Questioned
+= Questioning
+= Quiet
+= Quite
+= Quiter
+= Quietest
+= Quoting
+= Quoted
+
+R section
+
+= Refresh
+= Russian
+= Review
+= Report
+= Request
+= Redirect
+= Redirected
+= Redirecting
+= Religion
+= Rip
+= Ripped
+= Ripping
+= Riot
+= Rioting
+= Rioter
+= Rent
+= Renter
+= Renting
+= Rat
+= Rats
+= Ratted
+= Rattle
+= Rattling
+= Rattled
+= Requesting
+= Requested
+= Rope
+= Roping
+= Roped
+
+S section
+
+= Sign
+= Spanish
+= Suspended
+= Sure
+= Script
+= South
+= Southern
+= Sip
+= So
+= Space
+= Series
+= Sent
+= Sending
+= Send
+= Sight
+= Site
+= Sighted
+= Sighting
+= Sapling
+= Sap
+= Slop
+= Sloppy
+= Soup
+= Suck
+= Sucked
+= Sucking
+= Sender
+= Slot
+= Slope
+= Slopes
+= Sling
+= Slinging
+= Slinged
+= Story
+= Stories
+= Silence
+= Silenced
+= Silencing
+= Snake
+= Snakes
+= Sheep
+= Sought
+= Soap
+= Soapy
+= Sad
+= Sadness
+= Sadder
+
+T section
+
+= Traditional
+= Time
+= Timer
+= Timed
+= Timing
+= Tip
+= Tips
+= Tipped
+= Tipping
+= Topping
+= Tube
+= Tubes
+= Tub
+= Tight
+= Tighter
+= Tightest
+= That
+= The
+= They
+= Tint
+= Tin
+
+U section
+
+= Username
+= Upload
+= User
+= User
+= Up
+= Using
+= Used
+= Uploading
+= Uploaded
+= Uptime
+= Upper
+= Ukelele
+
+V section
+
+= Virtual
+= Video
+= View
+= Views
+= Vote
+= Voter
+= Voting
+= Very
+= Vroom
+= Vision
+= Visioned
+= Visioning
+= Virtually
+= Vile
+= Vintage
+
+W section
+
+= Welcome
+= Write
+= Web
+= Wide
+= World
+= Work
+= West
+= Western
+= Wrong
+= Wing
+= Winged
+= Winging
+= Wire
+= Wiring
+= Wired
+= Wise
+= Wiser
+= Wisest
+= Welsh
+= White
+= Whip
+= Whipping
+= Whipped
+= Wrote
+= Writing
+= Writer
+= Win
+= Won
+= Winning
+= Winner
+= Will
+= Willing
+= Woke
+= Warp
+= Warping
+= Warped
+= Window
+= Windows
+= Windowed
+= Wipe
+= Wiper
+= Wiped
+= Winter
+
+X section
+
+= Xhosa
+= Xylophone
+= Xenial
+
+Y section
+
+= Yes
+= You
+= Yeast
+= You're
+= Your
+= Youre
+= Yearn
+= Yearning
+= Yearned
+= Year
+= Years
+= Yin
+
+Z section
+
+= Zip
+= Zipped
+= Zone
+= Zoned
+= Zen
+= Zap
+= Zapped
+= Zapping
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+KOREAN_TO_ENGLISH_TRANSLATOR
+
+A section
+
+B section
+
+C section
+
+D section
+
+E section
+
+F section
+
+G section
+
+H section
+
+I section
+
+J section
+
+K section
+
+L section
+
+M section
+
+N section
+
+O section
+
+P section
+
+Q section
+
+R section
+
+S section
+
+T section
+
+U section
+
+V section
+
+W section
+
+X section
+
+Y section
+
+Z section
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TELUGU_TO_ENGLISH_TRANSLATOR
+
+A section
+
+B section
+
+C section
+
+D section
+
+E section
+
+F section
+
+G section
+
+H section
+
+I section
+
+J section
+
+K section
+
+L section
+
+M section
+
+N section
+
+O section
+
+P section
+
+Q section
+
+R section
+
+S section
+
+T section
+
+U section
+
+V section
+
+W section
+
+X section
+
+Y section
+
+Z section
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+JAPANESE_TO_ENGLISH_TRANSLATOR
+
+A section
+
+B section
+
+C section
+
+D section
+
+E section
+
+F section
+
+G section
+
+H section
+
+I section
+
+J section
+
+K section
+
+L section
+
+M section
+
+N section
+
+O section
+
+P section
+
+Q section
+
+R section
+
+S section
+
+T section
+
+U section
+
+V section
+
+W section
+
+X section
+
+Y section
+
+Z section
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+WELSH_TO_ENGLISH_TRANSLATOR
+
+A section
+
+B section
+
+C section
+
+D section
+
+E section
+
+F section
+
+G section
+
+H section
+
+I section
+
+J section
+
+K section
+
+L section
+
+M section
+
+N section
+
+O section
+
+P section
+
+Q section
+
+R section
+
+S section
+
+T section
+
+U section
+
+V section
+
+W section
+
+X section
+
+Y section
+
+Z section
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+SWEDISH_TO_ENGLISH_TRANSLATOR
+
+A section
+
+B section
+
+C section
+
+D section
+
+E section
+
+F section
+
+G section
+
+H section
+
+I section
+
+J section
+
+K section
+
+L section
+
+M section
+
+N section
+
+O section
+
+P section
+
+Q section
+
+R section
+
+S section
+
+T section
+
+U section
+
+V section
+
+W section
+
+X section
+
+Y section
+
+Z section
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+CHINESE(SIMPLIFIED)_TO_ENGLISH_TRANSLATOR
+
+A section
+
+B section
+
+C section
+
+D section
+
+E section
+
+F section
+
+G section
+
+H section
+
+I section
+
+J section
+
+K section
+
+L section
+
+M section
+
+N section
+
+O section
+
+P section
+
+Q section
+
+R section
+
+S section
+
+T section
+
+U section
+
+V section
+
+W section
+
+X section
+
+Y section
+
+Z section
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TELUGU_TO_ENGLISH_TRANSLATOR
+
+A section
+
+B section
+
+C section
+
+D section
+
+E section
+
+F section
+
+G section
+
+H section
+
+I section
+
+J section
+
+K section
+
+L section
+
+M section
+
+N section
+
+O section
+
+P section
+
+Q section
+
+R section
+
+S section
+
+T section
+
+U section
+
+V section
+
+W section
+
+X section
+
+Y section
+
+Z section
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+XHOSA_TO_ENGLISH_TRANSLATOR
+
+A section
+
+B section
+
+C section
+
+D section
+
+E section
+
+F section
+
+G section
+
+H section
+
+I section
+
+J section
+
+K section
+
+L section
+
+M section
+
+N section
+
+O section
+
+P section
+
+Q section
+
+R section
+
+S section
+
+T section
+
+U section
+
+V section
+
+W section
+
+X section
+
+Y section
+
+Z section
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+# Sections copy and paste (letter sections only)
+
+A section
+
+B section
+
+C section
+
+D section
+
+E section
+
+F section
+
+G section
+
+H section
+
+I section
+
+J section
+
+K section
+
+L section
+
+M section
+
+N section
+
+O section
+
+P section
+
+Q section
+
+R section
+
+S section
+
+T section
+
+U section
+
+V section
+
+W section
+
+X section
+
+Y section
+
+Z section
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# Library copy and paste (<language> to English)
+
+A section
+
+= Amharic
+= account
+= a
+= about
+= arabic
+= are
+= Apple
+= Alert
+
+= Amplify
+= Amplified
+= Ant
+= Ants
+= Aunt
+= Aunts
+= And
+= Aren't
+= Action
+= Actions
+= Accent
+= Accents
+= Anti
+= Animate
+= Animated
+= Animation
+= Animating
+= Audio
+= Albanian
+= America
+= Aloud
+= Alerting
+= Alerted
+= Accounted
+= Accounting
+= Afrikaans
+= Acute
+= Ash
+= Ashes
+= Ankle
+= Ankles
+= Ass
+= Asshole
+= Armenian
+= Archaic
+= Atlantic
+= Arctic
+= Azerbaijani
+= Affirmative
+= Alot
+= Amazon
+= Army
+= Armies
+= Arch
+= Arched
+= Arc
+= Answer
+= Answered
+= Answering
+= Answers
+= Amish
+= Art
+= Artist
+= August
+= April
+= Atom
+= Atomic
+= After
+= Autism
+= Autistic
+= Acoustic
+= Ad
+= Advert
+= Advertisement
+= Advertisements
+= Ads
+= Average
+= Averaged
+= Averages
+= Access
+= Accessable
+= Accesses
+= Aid
+= Aids
+= Absorb
+= Absorbing
+= Absorbed
+= Alphabet
+= Alphabetical
+= Ace
+= Aced
+= Acing
+= Another
+= Assume
+= Assuming
+= Assumed
+= Assert
+= Asserting
+= Assertive
+= Ape
+= Apes
+= All
+
+B section
+
+= block
+= blocked
+= blocking
+= blocker
+= browser
+= browsed
+= browsing
+= bow
+= bowed
+= book
+= bit
+= bite
+
+= Bake
+= Baked
+= Bang
+= Banging
+= Banged
+= Bash
+= Bashed
+= Bashing
+= Basic
+= Boolean
+= Basically
+= Basics
+= Basque
+= Belarusian
+= Bengali
+= Bosnian
+= Bulgarian
+= Boston
+= Bulgaria
+= Brass
+= Ban
+= Banned
+= Banning
+= Banter
+= Bitch
+= Bike
+= Bicycle
+= Bicycling
+= Bicycles
+= Boom
+= Booming
+= Ball
+= Balls
+= Barred
+= Bar
+= Bars
+= Base
+= Bases
+= Bone
+= Bones
+= Boned
+= Bun
+= Buns
+= Bunny
+= Baste
+= Busy
+= Business
+= Bin
+= Bins
+= Binary
+= Build
+= Building
+= Built
+= Boss
+= Bossed
+= Bossing
+= Bosses
+= Bucket
+= Buckets
+= Boo
+= Bool
+= Barbed
+= Blanket
+= Blanketed
+= Blanketing
+= Books
+= Book
+= Booking
+= Brave
+= Braver
+= Bravest
+= Basket
+= Baskets
+= Banquet
+= Barbeque
+= Barbequed
+= Back
+= Backed
+= Backing
+= Bass
+= Bat
+= Batting
+= Batted
+= Black
+= Blacked
+= Blacking
+= Bear
+= Bears
+= Bare
+= Bad
+= Badly
+= Baddest
+= Boy
+= Boys
+= Because
+= Became
+= Become
+= Becoming
+= Boner
+= Byte
+= Brother
+= Brothers
+= Bowl
+= Bowling
+= Bowled
+= 
+
+C section
+
+= close
+= chinese
+= connect
+= comment
+= check
+= Clear
+= Clip
+= Caution
+= Cannot
+= Clearing
+= Clipped
+= Clipping
+= Checked
+= Checking
+
+= Crash
+= Crashed
+= Crashing
+= Cannon
+= Cannons
+= Country
+= Countries
+= City
+= Cities
+= Cite
+= Cited
+= Citing
+= Cent
+= Cents
+= Catalan
+= Cebuano
+= Chichewa
+= Cook
+= Cooked
+= Cooking
+= Cooker
+= Cooks
+= Corsican
+= Croatian
+= Czech
+= Closet
+= Character
+= Characters
+= Charisma
+= Can
+= Cans
+= Canned
+= Cabinet
+= Casket
+= Cabinets
+= Caskets
+= Cist
+= Crap
+= Crapper
+= Crapping
+= Cab
+= Cash
+= Cashed
+= Cashing
+= Cob
+= Cobbed
+= Corn
+= Cobbing
+= Center
+= Centered
+= Centering
+= Calculate
+= Calculator
+= Calculated
+= Car
+= Cars
+= Call
+= Caller
+= Calling
+= Called
+= Cane
+= Candy
+= Caned
+= Crook
+= Crooked
+= Crooks
+= Croak
+= Croaking
+= Chocolate
+= Chocolatier
+= China
+= Cool
+= Cooler
+= Coolest
+= Cadet
+= Camera
+= Cameras
+= Capture
+= Captured
+= Capturing
+= Canteen
+= Carbonate
+= Carbonated
+= Cell
+= Cells
+= Celled
+= Crime
+= Crimes
+= Cry
+= Cried
+= Crying
+= Cries
+= Claw
+= Claws
+= Clawed
+= Clawing
+= Carl
+= Coral
+= Corral
+= Cast
+= Casting
+= Casted
+= Closed
+= Closing
+= Clock
+= Clocks
+= Clocked
+= Clocking
+= Cop
+= Cops
+= Copped
+= Chop
+= Chops
+= Chopping
+= Chopped
+= Cart
+= Carts
+= Carting
+= Cartel
+= Cock
+= Cocks
+= Cocked
+= Cocking
+= Clone
+= Cloned
+= Cloning
+= Cloak
+= Cloaking
+= Cloaked
+= Cloaks
+= Cable
+= Cables
+= Cabled
+= Cost
+= Costing
+= Costs
+= Celsius
+= Cyan
+= Color
+= Colors
+= Colored
+= Coloring
+= Creed
+= Creep
+= Creeper
+= Creepy
+= Creepiest
+= Camcorder
+= Camcorders
+= Creative
+= Creator
+= Created
+= Chris
+= Cross
+= Crossed
+= Crossing
+= Crop
+= Crops
+= Cropping
+= Cropped
+= Cement
+= Cemented
+= Cementing
+= Celery
+= Crow
+= Crows
+= Crack
+= Cracking
+= Cracked
+= Cracker
+= Clue
+= Clued
+= Castle
+= Castles
+= Cauldron
+= Cauldrons
+= Cuss
+= Cussing
+= Cussed
+= Creek
+= Creak
+= Creaking
+= Creaked
+= Coop
+= Cooped
+= Cooping
+= Coops
+= Chicken
+= Chickens
+= Chickened
+= 
+
+D section
+
+= download
+= delete
+= Distribution
+= Die
+= Death
+= Do
+= Diamond
+= Dive
+= Dived
+= Diving
+= Down
+
+= Document
+= Documented
+= Documenting
+= Documentation
+= Documents
+= Derive
+= Derivitive
+= Dire
+= Door
+= Doors
+= Danish
+= Damn
+= Dam
+= Dash
+= Dashes
+= Dashed
+= Date
+= Dates
+= December
+= Day
+= Days
+= Dance
+= Dances
+= Dancing
+= Dutch
+= Dutchess
+= Duke
+= Desert
+= Deserted
+= Deserting
+= Deplete
+= Depleted
+= Diamonds
+= Diver
+= Died
+= Death
+= Dying
+= Downloaded
+= Downloading
+= Downloads
+= Deleted
+= Distributions
+= Don't
+= Downing
+= Downer
+= Deleting
+= Distributed
+= Dingo
+= Disco
+= Deliver
+= Delivery
+= Delivered
+= Dark
+= Darker
+= Darkest
+= Dolan
+= Doom
+= Doomed
+= Dooming
+= Doomsday
+= Dad
+= Dads
+= Daddy
+= Dap
+= Dapper
+= Dude
+= Dudes
+= Dune
+= Dunes
+= Dollar
+= Dollars
+= Dish
+= Dishes
+= Dishing
+= Dave
+= David
+= Debug
+= Debugging
+= Debugged
+= Dual
+= Dumb
+= Dumber
+= Dumbest
+= Dare
+= Dared
+= Dares
+= Daring
+= Danger
+= Dangerous
+= Dangers
+= Deep
+= Deeper
+= Deepest
+= Ditch
+= Ditches
+= Ditching
+= Dab
+= Dabbed
+= Dabbing
+= Detect
+= Detecting
+= Detector
+= Detective
+= Develop
+= Developer
+= Developing
+= Developed
+= Develops
+= Disc
+= Disk
+= Disks
+= Discs
+= Diskette
+= Disks
+= Discs
+= Drive
+= Driver
+= Driving
+= Drove
+= Drivers
+= Drives
+= Deed
+= Dead
+= Deadly
+= Deadliest
+= Desk
+= Desks
+= Data
+= Den
+= Dens
+= Denver
+= Detroit
+= Dim
+= Dimmed
+= Dimming
+= Dimmer
+= Donate
+= Donated
+= Donating
+= Donates
+= 
+
+E section
+
+= English
+= Executable
+= Executed
+= Execute
+= Executing
+= Error
+= Errors
+= Earth
+= Emergency
+= East
+= Eastern
+
+= Encoding
+= Encodable
+= Enter
+= Entered
+= Entering
+= Emergencies
+= Eel
+= Electron
+= Electrons
+= Electronic
+= Electronics
+= Electric
+= Electricity
+= Elon
+= Eoan
+= Ebola
+= Eric
+= Easy
+= Easier
+= Easiest
+= Edit
+= Edited
+= Editing
+= Edits
+= Enters
+= Ear
+= Ears
+= Eery
+= Eradicate
+= Eradicated
+= Eradicating
+= Earn
+= Earned
+= Earns
+= Earning
+= Europe
+= European
+= Europeans
+= Excited
+= Excite
+= Exciting
+= Elk
+= Emily
+= Emo
+= Ember
+= Embers
+= Esperanto
+= Estonian
+= End
+= Ender
+= Ending
+= Ended
+= Ends
+= 
+
+F section
+
+= File not found 
+= Friend
+= French
+= Free
+= Files
+= File
+= Fight
+= Fit
+= Fought
+= Fire
+= Fox
+= Flip
+= For
+
+= Fast
+= Faster
+= Fastest
+= Frequent
+= Frequently
+= Freak
+= Freaky
+= Freaking
+= Fried
+= Frying
+= Fry
+= Friendly
+= Friended
+= Friends
+= Fresh
+= Freshly
+= Freshest
+= Flower
+= Flake
+= Flowers
+= Flowering
+= Flakes
+= Flaking
+= Fish
+= Fin
+= Fins
+= Finland
+= Firey
+= Fired
+= Firing
+= Fighting
+= Flight
+= Farm
+= Farmed
+= Farming
+= Farms
+= Foster
+= Fostering
+= Family
+= Families
+= Frack
+= Fuck
+= Fucked
+= Fucker
+= Fucking
+= Fill
+= Filled
+= Filling
+= Fake
+= Faking
+= Faked
+= Frantic
+= Frantically
+= Franchise
+= Franchises
+= Franchised
+= Fruit
+= Fruits
+= Fruity
+= Fool
+= Fools
+= Foolish
+= Freight
+= Fat
+= Fattest
+= Fatter
+= Fatty
+= Fap
+= Fapped
+= Fapping
+= Fapper
+= February
+= Fright
+= Frights
+= Frightened
+= Frightening
+= Filler
+= Fib
+= Fibbed
+= Fibbing
+= Fahrenheit
+= Frozen
+= Froze
+= Freeze
+= Freezing
+= Flat
+= Flatter
+= Flattest
+= Filipino
+= Finnish
+= Finish
+= Finished
+= Finishing
+= Finishes
+= Frisian
+= Flail
+= Flailing
+= Flailed
+= Flask
+= Flash
+= Flashing
+= Flashes
+= Flashed
+= Flasher
+= Feast
+= Feasted
+= Feasting
+= Forest
+= Forested
+= Foresting
+= Floral
+= Florist
+= Floor
+= Floors
+= Floored
+= Fall
+= Fell
+= Falling
+= Fame
+= Famous
+= Famously
+= Fate
+= Faded
+= Fade
+= Fading
+= Fan
+= Fans
+= Fanned
+= Flesh
+= Forge
+= Forging
+= Fist
+= Fisted
+= Fisting
+= Fad
+
+G section
+
+= German
+= Georgian
+= Greek
+= Gym
+= Gentle
+
+= Giant
+= Gin
+= Galician
+= Gujarati
+= Greece
+= Grease
+= Greasy
+= Grime
+= Glow
+= Glowing
+= Glows
+= Glowed
+= Glass
+= Glasses
+= Gloat
+= Gloated
+= Gloating
+= Goat
+= Game
+= Gaming
+= Gamed
+= Gain
+= Gaining
+= Gained
+= Gains
+= Grape
+= Grapes
+= Great
+= Greater
+= Greatest
+= Greats
+= Grope
+= Groping
+= Groped
+= Gossip
+= Gauntlet
+= Gauntlets
+= Got
+= Gotten
+= God
+= Godly
+= Ghost
+= Ghosts
+= Ghosting
+= Good
+= Ghoul
+= Ghast
+= Gap
+= Gapped
+= Gapping
+= Gaps
+= Genes
+= Gene
+= Gold
+= Golden
+= Golding
+= Gulp
+= Gulping
+= Gulped
+= Gorge
+= Gorged
+= Gorges
+= Gate
+= Gates
+= Gatekeeper
+= Gatekeepers
+= Gatekeeping
+= 
+
+H section
+
+= History
+= Hello
+= Hint
+= Hinting
+= Hinted
+= Hinge
+= Hinges
+= Hinged
+= Hinging
+= Hebrew
+= He
+= Him
+= Her
+= His
+= Hers
+
+= Haitian
+= Hausa
+= Hawaii
+= Hawaiian
+= Hawaiian
+= Hate
+= Hated
+= Hating
+= Hater
+= Hindi
+= Hmong
+= Hungarian
+= Hung
+= Hull
+= Hue
+= Hoop
+= Hoops
+= Hooped
+= Haste
+= Hash
+= Hand
+= Hands
+= Handy
+= Handed
+= Human
+= Humanity
+= Humane
+= Humans
+= Hat
+= Hats
+= Hates
+= Haiti
+= Hi
+= Hope
+= Hoped
+= Hoping
+= Hiss
+= Hissing
+= Hissed
+= Hair
+= Hairy
+= Hairiest
+= Hack
+= Hacker
+= Hacking
+= Hacked
+= Had
+= Hadn't
+= Hasn't
+= Has
+= Ham
+= Hammer
+= Hammered
+= Hammering
+= Hail
+= Hailed
+= Hailing
+= Help
+= Helping
+= Helped
+= Have
+= Heaven
+= Haven
+= Heavens
+= Heat
+= Heated
+= Heating
+= Heart
+= Hearts
+= Hole
+= Holes
+= Holed
+= Hatch
+= Hatched
+= Hatching
+= Happen
+= Happening
+= Happened
+= Haul
+= Hauled
+= Hauling
+= Harm
+= Harmed
+= Harming
+= Harms
+= Hut
+= Huts
+= Hit
+= Hitting
+= Hits
+= Heap
+= Heaping
+= Heaped
+= Hop
+= Hopped
+= Hopping
+= Holiday
+= Holidays
+= Hare
+=
+
+I section
+
+= Image
+= Internet
+= In
+= Ice
+= Icy
+= I
+= Integer
+= Integers
+= Imperial
+= Icelandic
+= Inch
+= Inches
+= Inching
+
+= Is
+= Isn't
+= Istanbul
+= Irish
+= Ireland
+= Icicle
+= It
+= Its
+= It's
+= Igbo
+= Iceland
+= Italy
+= Italian
+= Indonesia
+= Indonesian
+= I'm
+= I've
+= Ivan
+= 
+
+J section
+
+= Just
+= Japan
+= Japanese
+= Jar
+= Javanese
+= Jab
+= Jack
+= Jacking
+= Jacked
+= Jam
+= Jammed
+= Jarred
+= Jock
+= Junior
+= Jolly
+= Jelly
+= Jet
+= Jets
+= Jump
+= Jumped
+= Jumping
+
+= Java
+= Jape
+= Japes
+= Jungle
+= Jungles
+= 
+
+K section
+
+= Knowledge
+= Korean
+= Karate
+= Korea
+= Keep
+= Kind
+= Kindness
+= Keeper
+= Keeping
+= Kite
+= Kit
+= Kitten
+= Kiss
+= Kissed
+= Kissing
+= Kill
+= Killed
+= Killing
+= Killer
+= Kick
+= Kicked
+= Kicking
+= Kept
+= Kilt
+= Kennel
+= Kernel
+= Kelp
+= Karma
+
+L section
+
+= Language
+= Log
+= Leave
+= Loop
+= Left
+= Limb
+= Leg
+= Legs
+= Legging
+= Leggings
+= Limbs
+= Lime
+= Limes
+= Lemon
+= Lemons
+= Light
+= Lights
+= Lighting
+= Lit
+= Listen
+= Listening
+= Listener
+= Lip
+= Lips
+= Lick
+= Licks
+= Licking
+= Licked
+= Learn
+= Learning
+= Learnt
+= Laugh
+= Laughed
+= Laughing
+= Lack
+= Lacked
+= Lacking
+= Label
+= Labels
+= Labeling
+= Labeled
+= Lantern
+= Lanterns
+= Lesson
+= Lessons
+= Lust
+= Lamp
+= Lamps
+= Large
+= Larger
+= Largest
+= Lean
+= Leaner
+= Last
+= Lasted
+= Lasting
+= Long
+= Longer
+= Longest
+= Lightning
+= License
+= Licensing
+= Licensed
+= Listened
+= Land
+= Landed
+= Landing
+= Lao
+= Latin
+= Latvian
+= lithuanian
+= Luxembourgish
+= Line
+= Lines
+= Lined
+= Lap
+= Lapped
+= Lapping
+= Laps
+= Late
+= Later
+= Latest
+= Leather
+= Lane
+= Lock
+= Locked
+= Locking
+= Love
+= Loved
+= Loving
+= Lover
+= Less
+= Lesser
+= Lies
+= Lied
+= Liar
+= Lingering
+= Lash
+= Lashed
+= Lashing
+= Lame
+= Lamer
+= Lamest
+= Loom
+= Looming
+= Loomed
+= Larva
+= Local
+= Lore
+= Luring
+= Lure
+= Lead
+= Leading
+= Leader
+= Lake
+= Lakes
+= Leaf
+= Leaves
+= Let
+= Lonely
+= Liver
+= Lie
+= Lint
+= Live
+= Lively
+= Lived
+= Locally
+= Locust
+= Lobe
+= Lava
+= Loaf
+= Loaves
+= Lasso
+= Lab
+= Laboratory
+= Lube
+= Lubricant
+= Lice
+= Like
+= Liked
+= Liking
+= Lever
+= Leverage
+= Lessen
+= Least
+= Lease
+= Lavender
+= Lamb
+= Law
+= Lawyer
+= Laws
+= Lapis
+= Ladder
+= Look
+= Looking
+= Lawn
+= Leak
+= Leaking
+= Log
+= Logging
+= Lynch
+= Leach
+= Labyrinth
+= Lectern
+= Library
+= Librarian
+= Lag
+= Lagging
+= Loot
+= Looted
+= Looting
+= Life
+= Lad
+= Lend
+= Lending
+= Leap
+= Leaped
+= Leaping
+= Lard
+= Loss
+= Loose
+= Lose
+= Lost
+= Larry
+= Lurk
+= Lurker
+= Lurking
+= List
+= Listed
+= Listing
+= Lightbulb
+= Liability
+= Likeness
+= Lasting
+= Logged
+= Lawless
+= Leech
+= Luck
+= Lucky
+= Lumber
+= Luckiest
+= Luckier
+= Lot
+= Lots
+= Lurked
+= Liable
+= Liabilities
+= Led
+= Lump
+= Lumpy
+= Letter
+= Letters
+= Leprechaun
+= Lightweight
+= Literature
+= Literal
+= Literally
+= Leave
+= Leaving
+= Loser
+= Lone
+= Loner
+= Lighter
+= Libre
+= Lynching
+= Lynched
+= Legend
+= Legends
+= Legendary
+= Link
+= Linked
+= Linking
+= Links
+= Legacy
+= Logo
+= Logos
+= Load
+= Loaded
+= Loading
+= Loader
+= Level
+= Leveling
+= Leveled
+= Levels
+= Limited
+= Limit
+= Limiting
+= Limits
+= Lens
+= Lenses
+= Looping
+= Looped
+= Looper
+= Living
+= Lotion
+= Lotions
+= Little
+= Littlest
+= Littler
+= Litter
+= Limp
+= Limping
+= Lumps
+= Lumping
+= Lovely
+= Liter
+= Lid
+= London
+= Lingered
+= Linger
+= Lateral
+= legal
+= liquor
+= licorice
+= Lush
+= Liberty
+= Liberties
+= Libraries
+= Lawful
+= Lamborghini
+= Latter
+= Lilac
+= Lobby
+= Laptop
+= Loon
+= Loonie
+= Lifeguard
+= Loft
+= Lay
+
+M section
+
+= Mozilla Firefox
+= More
+= Morning
+= Mint
+= Mending
+= Meant
+= Meaning
+= Mean
+= Meaner
+= Meanest
+= Middle
+= Modern
+= Mist
+= Might
+= Mighty
+= Mightiest
+= Moon
+= Map
+= Mapping
+= Mapped
+= Murder
+= Murderer
+= Murdering
+= Most
+= Met
+
+N section
+
+= Not Safe For Work
+= New
+= Not
+= North
+= No
+= Nope
+= Northern
+= Night
+= Nighttime
+= Nickel
+= Nine
+= Northwest
+= Northeast
+
+O section
+
+= Out
+= Output
+= Outer
+= Opinion
+= Opinions
+= Onion
+= Onions
+= Or
+= Ore
+= Okay
+= Oh
+= Oops
+= Over
+= Oat
+= Oats
+= Outran
+= Outrun
+
+P section
+
+= Picture
+= Pine
+= Point
+= Pointed
+= Pointed
+= Pint
+= Plant
+= Planting
+= Planted
+= Pin
+= Pinned
+= Pinning
+= Pie
+= Pit
+= Pick
+= Picked
+= Picking
+
+Q section
+
+= Quality
+= Quote
+= Quota
+= Quit
+= Quitter
+= Quitting
+= Question
+= Questions
+= Questioned
+= Questioning
+= Quiet
+= Quite
+= Quiter
+= Quietest
+= Quoting
+= Quoted
+
+R section
+
+= Refresh
+= Russian
+= Review
+= Report
+= Request
+= Redirect
+= Redirected
+= Redirecting
+= Religion
+= Rip
+= Ripped
+= Ripping
+= Riot
+= Rioting
+= Rioter
+= Rent
+= Renter
+= Renting
+= Rat
+= Rats
+= Ratted
+= Rattle
+= Rattling
+= Rattled
+= Requesting
+= Requested
+= Rope
+= Roping
+= Roped
+
+S section
+
+= Sign
+= Spanish
+= Suspended
+= Sure
+= Script
+= South
+= Southern
+= Sip
+= So
+= Space
+= Series
+= Sent
+= Sending
+= Send
+= Sight
+= Site
+= Sighted
+= Sighting
+= Sapling
+= Sap
+= Slop
+= Sloppy
+= Soup
+= Suck
+= Sucked
+= Sucking
+= Sender
+= Slot
+= Slope
+= Slopes
+= Sling
+= Slinging
+= Slinged
+= Story
+= Stories
+= Silence
+= Silenced
+= Silencing
+= Snake
+= Snakes
+= Sheep
+= Sought
+= Soap
+= Soapy
+= Sad
+= Sadness
+= Sadder
+
+T section
+
+= Traditional
+= Time
+= Timer
+= Timed
+= Timing
+= Tip
+= Tips
+= Tipped
+= Tipping
+= Topping
+= Tube
+= Tubes
+= Tub
+= Tight
+= Tighter
+= Tightest
+= That
+= The
+= They
+= Tint
+= Tin
+
+U section
+
+= Username
+= Upload
+= User
+= User
+= Up
+= Using
+= Used
+= Uploading
+= Uploaded
+= Uptime
+= Upper
+= Ukelele
+
+V section
+
+= Virtual
+= Video
+= View
+= Views
+= Vote
+= Voter
+= Voting
+= Very
+= Vroom
+= Vision
+= Visioned
+= Visioning
+= Virtually
+= Vile
+= Vintage
+
+W section
+
+= Welcome
+= Write
+= Web
+= Wide
+= World
+= Work
+= West
+= Western
+= Wrong
+= Wing
+= Winged
+= Winging
+= Wire
+= Wiring
+= Wired
+= Wise
+= Wiser
+= Wisest
+= Welsh
+= White
+= Whip
+= Whipping
+= Whipped
+= Wrote
+= Writing
+= Writer
+= Win
+= Won
+= Winning
+= Winner
+= Will
+= Willing
+= Woke
+= Warp
+= Warping
+= Warped
+= Window
+= Windows
+= Windowed
+= Wipe
+= Wiper
+= Wiped
+= Winter
+
+X section
+
+= Xhosa
+= Xylophone
+= Xenial
+
+Y section
+
+= Yes
+= You
+= Yeast
+= You're
+= Your
+= Youre
+= Yearn
+= Yearning
+= Yearned
+= Year
+= Years
+= Yin
+
+Z section
+
+= Zip
+= Zipped
+= Zone
+= Zoned
+= Zen
+= Zap
+= Zapped
+= Zapping
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+Google translate was used for build 1-10, 11, and coming soon
+Check for accuracy please
+Unfortunately I had to use Google Translate, as it was the most common one, and it is better than clicking on the wrong link and getting a virus (Windows 10 security in a nutshell)
+For some reason, multiple words also give me the same set of characters as the translation. This will definitally need to be corrected in the future
+I couldn't find a common word for X (no Xylophone doesn't count) so I chose the name of the Xhosa language
+Also I am going to need to keep a low profile for the night, as every change adds an entry to my search history.
+
+Current goals
+Get as many different character sets as possible
+Add all common languages
+Add all common words for a webpage
+
+The letter L currently has the most translations, build 8 really worked on the letter L in Arabic
+
+as of build 9, there are 267 words in English that are listed that start with the letter L
+
+It seems pointless to add in Google Translate, and it is no longer fun with Arabic. I will try to add in words to all languages, and translate a different language tomorrow
+Taken from TranslationMega V11
+!-->
+<HR>
+<H3>Predecessor pages</H3>
+<p><a href="../Accessibility/SubtitleSettings.html">SubtitleSettings.html</a></p>
+<HR>
+<!-- snapshot section V2 !-->
+<details><summary><H2>View older versions of this page</H2></summary>
+<H3>Snapshots 1 to 10</H3>
+<H4><button><a href="SNU_Lingual_Home_Snapshot1.html">Snapshot 1 (November 26th 2019)</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot2.html">Snapshot 2</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot3.html">Snapshot 3</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot4.html">Snapshot 4</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot5.html">Snapshot 5</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot6.html">Snapshot 6</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot7.html">Snapshot 7</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot8.html">Snapshot 8</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot9.html">Snapshot 9</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot10.html">Snapshot 10</a></button></H4>
+<H3>Snapshots 11 to 20</H3>
+<H4><button><a href="SNU_Lingual_Home_Snapshot11.html">Snapshot 11</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot12.html">Snapshot 12</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot13.html">Snapshot 13</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot14.html">Snapshot 14</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot15.html">Snapshot 15</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot16.html">Snapshot 16</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot17.html">Snapshot 17</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot18.html">Snapshot 18</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot19.html">Snapshot 19</a></button></H4>
+<H4><button><a href="SNU_Lingual_Home_Snapshot20.html">Snapshot 20</a></button></H4>
+</details>
+<HR>
+<H1>You have reached the bottom of this page.</H1>
+<HR>
+</HR>
+</BODY>
+<!-- This page was built off the basis of SNU Sourcebase HTML scriptstarter 1.03 !-->
+</HTML>
+<!-- Bottom script (filler) !-->
+<!--- end of script !--->
